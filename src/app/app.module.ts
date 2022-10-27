@@ -3,6 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//componentes del Proyecto
+
+import { NavbarComponent } from './estructura/navbar/navbar.component';
+import { FooterComponent } from './estructura/footer/footer.component';
+import { InicioComponent } from './paginas/inicio/inicio.component';
+import { ContactoComponent } from './paginas/contacto/contacto.component';
+import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
+import { ProductosComponent } from './paginas/productos/productos.component';
+
+// servicios
+
+import { UsuariosService } from './servicios/usuarios.service';
+import { StorageService } from './servicios/storage.service';
+import { ProductosService } from './servicios/productos.service';
+
+//Componentes de PrimeNG
 import {MenubarModule} from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -37,14 +53,23 @@ import { InputNumberModule } from "primeng/inputnumber";
 import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
-
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PanelModule} from 'primeng/panel';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
+//Firebase
+import { AngularFireModule } from "@angular/fire/compat";
+import { initializeApp } from 'firebase/app';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    InicioComponent,
+    ContactoComponent,
+    NosotrosComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -89,9 +114,11 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
     HttpClientModule,
     DynamicDialogModule,
     PanelModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+
   ],
-  providers: [],
+  providers: [UsuariosService, StorageService, ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
