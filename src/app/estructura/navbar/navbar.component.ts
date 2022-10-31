@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
+  // Menu e items
   ngOnInit():void{
     this.items = [
       {
@@ -49,6 +50,7 @@ export class NavbarComponent implements OnInit {
           }
         ]
       },
+      // el admin se oculta mientras el usuario no se haya logueado
       {
         label: "Admin",
         icon: "pi pi-user",
