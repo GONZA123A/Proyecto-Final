@@ -59,6 +59,7 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 //Firebase
 import { AngularFireModule } from "@angular/fire/compat";
 import { initializeApp } from 'firebase/app';
+import { AdminComponent } from './paginas/admin/admin.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { initializeApp } from 'firebase/app';
     InicioComponent,
     ContactoComponent,
     NosotrosComponent,
-    ProductosComponent
+    ProductosComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
