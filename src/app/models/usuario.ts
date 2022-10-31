@@ -1,5 +1,5 @@
-export interface Usuario {
+export interface Usuarios {
     usuario:string,
-    contrasena:string,
-    idUsuario: string
+    contrasena:string
+    
 }
