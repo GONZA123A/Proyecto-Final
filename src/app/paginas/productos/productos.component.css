@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 32.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.top-productos .productos{
+    margin: 30px;
+}
+.top-productos{
+    margin-left: 40px;
+}
+
+.top-productos .productos .tarjetas .descripcion .tit{
+    font-size: 25px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.top-productos .productos .tarjetas .descripcion .price{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.top-productos .productos .tarjetas .pi {
+    margin-top: 20px;
+    font-size: 23px;
+    color: #e84393;
+    
+}
+
+.top-productos .productos .tarjetas .pi:hover{
+    font-size: 25px;
+}
+.top-productos .productos .carrito{
+    margin: 10px;
+}
+
+.top-productos .productos .favorito{
+    margin: 10px;
+    margin-right: 120px;
+
+}
+
+.top-productos .productos .tarjetas .descripcion span{
+    text-align: left;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.top-productos .texto{
+    margin-left: 40px;
+}
+
+.top-productos .texto h1{
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.top-productos .texto p{
+    text-align: left;
+    font-size: 19px;
+    color: #999;
+}
