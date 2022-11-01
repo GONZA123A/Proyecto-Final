@@ -1,1 +1,41 @@
-<p>footer works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <section class="footer"> 
+        <ul class="list" style="color:#000;"><!--contiene todos los links de componentes-->
+            <li>
+                <a id="link" routerLink="/inicio">Inicio</a>
+            </li>
+            <li>
+                <a  id="link" href="/productos">Productos</a>
+            </li>
+            <li>
+                <a  id="link" href="/nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a  id="link" href="/contacto">Contacto</a>
+            </li>
+        </ul>
+        <div class="social"> <!--social contiene las redes sociales y su respectivo link-->
+            <a routerLink="https://www.instagram.com/"><i class="pi pi-instagram"> </i></a>
+            <a routerLink="https://www.facebook.com/"><i class="pi pi-facebook"> </i></a>
+            <a routerLink="https://twitter.com/"><i class="pi pi-twitter"> </i></a>
+            <a routerLink="https://www.youtube.com/"><i class="pi pi-youtube"> </i></a>
+        </div>
+        <p class="copyright">
+            todos los derechos reservados a ©Paris2022
+        </p>
+        <div class="tarjetas"><!--contiene las imagenes de los medios de pago-->
+            <img src="../../../assets/img/visa.png" alt="Visa">
+            <img src="../../../assets/img/paypal.png" alt="paypal">
+            <img src="../../../assets/img/mastercard.png" alt="Mastercard">
+        </div>
+    </section>
+</body>
+</html>

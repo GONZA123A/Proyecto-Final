@@ -11,6 +11,10 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 import { ProductosComponent } from './paginas/productos/productos.component';
+import { AdminComponent } from './paginas/admin/admin.component';
+import { OjosComponent } from './paginas/ojos/ojos.component';
+import { LabialComponent } from './paginas/labial/labial.component';
+import { RostroComponent } from './paginas/rostro/rostro.component';
 
 // Servicios
 import { UsuariosService } from './servicios/usuarios.service';
@@ -60,7 +64,6 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { AngularFireModule } from "@angular/fire/compat";
 import { initializeApp } from 'firebase/app';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +72,11 @@ import { initializeApp } from 'firebase/app';
     InicioComponent,
     ContactoComponent,
     NosotrosComponent,
-    ProductosComponent
+    ProductosComponent,
+    AdminComponent,
+    OjosComponent,
+    LabialComponent,
+    RostroComponent
   ],
   imports: [
     BrowserModule,
@@ -116,7 +123,6 @@ import { initializeApp } from 'firebase/app';
     PanelModule,
     DynamicDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-
   ],
   providers: [UsuariosService, StorageService, ProductosService], // patentación de servicios
   bootstrap: [AppComponent]
