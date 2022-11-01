@@ -22,10 +22,6 @@
                 <input id="float-input" type="text" pInputText formControlName="categoria">
                 <label for="float-input">Categoria</label>
             </span>
-            <span class="p-float-label">
-                <input class="float-input" id="float-input" type="text" pInputText formControlName="imagen">
-                <label for="float-input">Imagen</label>
-            </span>
             <div class="col-12" style="text-align: center; margin-top: 5px;">
                 <input type="file" pInputText accept="imagen/*" (change)="cargarImagen($event)">
                 <button pButton class="btn " type="submit" label="{{textBoton}}" (click)="cargarDatos()"></button>
