@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.servicioProductos.obtenerProducto().subscribe((producto) => (this.coleccionProductos = producto));
   }
+
   //se hace un arreglo con formgroup con cada dato que tenga
   producto = new FormGroup({
     nombre: new FormControl('', Validators.required),

@@ -6,7 +6,6 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class UsuariosService {
-
   //declaramos usuariosCollection a privado
   private usuariosCollection: AngularFirestoreCollection<Usuario>
   //lo conectamos con la base de datos
