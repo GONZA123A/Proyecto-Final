@@ -11,7 +11,7 @@ export class UsuariosService {
   private usuariosCollection: AngularFirestoreCollection<Usuarios>
   //lo conectamos con la base de datos
   constructor(private db:AngularFirestore) { 
-    this.usuariosCollection = db.collection('Usuarios');
+    this.usuariosCollection = db.collection('usuarios');
   }
   //obtenemos los usuarios de la base de datos
   obtenerUsuarios(){
