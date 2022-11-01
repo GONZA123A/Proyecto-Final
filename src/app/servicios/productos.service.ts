@@ -29,7 +29,7 @@ export class ProductosService {
     return new Promise(async (resolve, reject) => {
       try {
         const id = this.db.createId();
-        nuevoProducto.idproducto = id;
+        nuevoProducto.idproductos = id;
         nuevoProducto.imagen = url
 
         //se guarda en variable
@@ -42,7 +42,7 @@ export class ProductosService {
     })
   }
   //modificar
-  modicarProducto(idProducto: string, nuevaData: Producto) {
+  modificarProducto(idProducto: string, nuevaData: Producto) {
     return this.db.collection('productos').doc(idProducto).update(nuevaData)
   }
   //para eliminar

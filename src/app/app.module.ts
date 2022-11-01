@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations' 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //componentes del Proyecto
@@ -56,10 +56,11 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PanelModule} from 'primeng/panel';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-
 //Firebase
 import { AngularFireModule } from "@angular/fire/compat";
 import { initializeApp } from 'firebase/app';
+import { AdminComponent } from './paginas/admin/admin.component';
+import { LoginComponent } from './paginas/login/login.component';
 
 
 @NgModule({
@@ -70,11 +71,13 @@ import { initializeApp } from 'firebase/app';
     InicioComponent,
     ContactoComponent,
     NosotrosComponent,
-    ProductosComponent
+    ProductosComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule ,
+    BrowserAnimationsModule,
     AppRoutingModule,
     DropdownModule,
     CascadeSelectModule,

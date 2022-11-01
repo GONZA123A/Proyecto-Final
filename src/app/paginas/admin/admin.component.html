@@ -1,0 +1,82 @@
+<!-- Formulario para AGREGAR Producto -->
+<div class="col-12 barra">
+    <div class="categoria">
+        <h1>Productos</h1>
+    </div>
+    <p-dialog header="Agregar Producto" [(visible)]="modalVisible">
+        <form [formGroup]="producto" >
+            <span class="p-float-label">
+                <input class="float-input" id="float-input" type="text" pInputText formControlName="nombre">
+                <label for="float-input">Nombre</label>
+            </span>
+            <span class="p-float-label">
+                <input class="float-input" id="float-input" type="text" pInputText formControlName="marca">
+                <label for="float-input">Marca</label>
+            </span>
+            <span class="p-float-label">
+                <input id="float-input" type="number" pInputText formControlName="precio">
+                <label for="float-input">Precio</label>
+            </span>
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText formControlName="categoria">
+                <label for="float-input">Categoria</label>
+            </span>
+            <div class="col-12" style="text-align: center; margin-top: 5px;">
+                <input type="file" pInputText accept="imagen/*" (change)="cargarImagen($event)">
+                <button pButton class="btn " type="submit" label="{{textBoton}}" (click)="cargarDatos()"></button>
+            </div>
+        </form>
+    </p-dialog>
+    
+</div>
+<!-- Cartel de Advertencia antes de ELIMINAR -->
+<p-dialog header="¡¡ADVERTENCIA!!" [(visible)]="eliminarVisible">
+    <p class="advertencia">
+        ¿Deseas eliminar este producto?
+    </p>
+    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success" (click)="borrarProducto()"></button>
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"
+        (click)="eliminarVisible=false">
+    </button>
+
+</p-dialog>
+<!-- Card para MOSTRAR Productos -->
+<div class="coleccion">
+    <p-table responsiveLayout="scroll" [value]="coleccionProductos">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Imagen</th>
+                <th>Funciones</th>
+    
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-producto >
+            
+            <tr style="font-size: 15px;">
+                <td><p>{{producto.nombre}}</p></td>
+                <td><p>{{producto.marca}}</p></td>
+                <td><p>${{producto.precio}}</p></td>
+                <td><p>{{producto.categoria}}</p></td>
+                <td type="image"><img [src]="producto.imagen" alt="100px" width="" height="100px"></td>
+    
+                <td> 
+                    <button pButton pRipple type="button" icon="pi pi-pencil" style="margin:10px ;" class="p-button-success"
+                        (click)="mostrarEditar(producto)">
+                    </button>
+                    <button pButton pRipple type="button" icon="pi pi-trash" style="margin:10px ;" class="p-button-danger"
+                        (click)="mostrarEliminar(producto)">
+                    </button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+</div>
+<!--este es el boton que agrega la informacion a los productos-->
+<div class="col-12" style="text-align: center;">
+    <button pButton class="btn " label="Agregar producto" (click)="mostrarDialogoProducto()"></button>
+</div>

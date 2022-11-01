@@ -1,28 +1,13 @@
 <p-menubar [model]="items" [style]="{'background-color': 'pink'}">
     <ng-template pTemplate="start">
-        Paris
+        <h2>
+            <img src="/assets/Imagenes/icono.png" height="25" class="mr-2" alt="ícono">
+            Paris
+        </h2>
     </ng-template>
     <ng-template pTemplate="end">
         <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-heart"></button>
         <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-shopping-cart"></button>
-        <button type="button" pButton pRipple class="p-button-text" id="boton" (click)="showModalDialog()" icon="pi pi-user"></button>
+        <button type="button" pButton pRipple class="p-button-text" id="boton" routerLink="/login" icon="pi pi-user"></button>
     </ng-template>
 </p-menubar>
-<!-- Acá se presenta un formulario para ingresar el usuario y contraseña -->
-<div class="wrapper">
-    <p-dialog header="Iniciar sesion" [(visible)]="modalVisible">
-        <form [formGroup]="Usuario">
-            <!-- Label Nombre Usuario -->
-            <span class="p-float-label">
-                <h2>Usuario</h2>
-                <input type="text" id="float-input" pInputText formControlName="usuario">
-            </span>
-            <!-- Label Contraseña -->
-            <span class="p-float-label">
-                <h2>Contraseña</h2>
-                <input type="password" id="float-input" pInputText formControlName="contrasena">
-            </span>
-            <button id="boton" style="margin-top: 15px;" pButton pRipple type="submit" class="p-button-rounded p-button-info" (click)="verificarUsuario()" label="Ingresar"></button>
-        </form>
-    </p-dialog>
-</div>
