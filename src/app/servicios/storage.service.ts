@@ -13,11 +13,11 @@ export class StorageService {
   constructor() { }
 
   //el ref recibe la url de la imagen y la instancia
-  async subirImagen(nombre: string, imagen: any) {
+  async subirImagen(nombre: string, imagen: any,ruta:string) {
     //posibilidad de error se usa try y catch
     try {
       //da la ruta donde se va a guardar la imagen dentro del storage
-      let referenciaImagen = ref(this.storage, 'productos/' + nombre)
+      let referenciaImagen = ref(this.storage, ruta +'/' + nombre)
       //creamos la tarea que se encarga de subir la imagen(en este caso usando el metodo uploadString()
       this.respuesta = await uploadString(referenciaImagen, imagen, 'data_url')
         //rescibe una respuesta

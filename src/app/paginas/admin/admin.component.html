@@ -81,3 +81,71 @@
 <div class="col-12" style="text-align: center;">
     <button pButton class="btn " label="Agregar producto" (click)="mostrarDialogoProducto()"></button>
 </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Formulario para AGREGAR CALESITA -->
+<div class="col-12 barra">
+    <div class="categoria">
+        <h1>Calesita</h1>
+    </div>
+    <p-dialog header="Agregar Calesita" [(visible)]="modalVisibleCalesita">
+        <form [formGroup]="calesita" >
+            <span class="p-float-label">
+                <input type="file" pInputText accept="imagen/*" (change)="cargarImagen2($event)" formControlName="imagen">
+
+            </span>
+            <div class="col-12" style="text-align: center; margin-top: 5px;">
+                
+                <button pButton class="btn " type="submit" label="{{textBoton}}" (click)="cargarDatosCalesita()"></button>
+            </div>
+        </form>
+    </p-dialog>
+    
+</div>
+
+
+<!-- Cartel de Advertencia antes de ELIMINAR Calesita -->
+<p-dialog header="¡¡ADVERTENCIA!!" [(visible)]="eliminarVisibleCalesita">
+    <p class="advertencia">
+        ¿Deseas eliminar esta imagen?
+    </p>
+    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success" (click)="borrarCalesita()"></button>
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"
+        (click)="eliminarVisibleCalesita=false">
+    </button>
+
+</p-dialog>
+
+
+<!-- Card para MOSTRAR Calesita -->
+<div class="coleccion">
+    <p-table responsiveLayout="scroll" [value]="coleccionCalesita">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Imagen</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-calesita >
+            
+            <tr style="font-size: 15px;">
+                <td type="image"><img [src]="calesita.imagen" alt="100px" width="" height="100px"></td>
+    
+                <td> 
+                    <button pButton pRipple type="button" icon="pi pi-pencil" style="margin:10px ;" class="p-button-success"
+                        (click)="mostrarEditarCalesita(calesita)">
+                    </button>
+                    <button pButton pRipple type="button" icon="pi pi-trash" style="margin:10px ;" class="p-button-danger"
+                        (click)="mostrarEliminarCalesita(calesita)">
+                    </button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+</div>
+
+<!--este es el boton que agrega la informacion a Calesita-->
+<div class="col-12" style="text-align: center;">
+    <button pButton class="btn " label="Agregar Calesita" (click)="mostrarDialogoCalesita()"></button>
+</div>

@@ -61,6 +61,9 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { initializeApp } from 'firebase/app';
 import { AdminComponent } from './paginas/admin/admin.component';
 import { LoginComponent } from './paginas/login/login.component';
+import { LabialComponent } from './paginas/labial/labial.component';
+import { OjosComponent } from './paginas/ojos/ojos.component';
+import { RostroComponent } from './paginas/rostro/rostro.component';
 
 
 @NgModule({
@@ -73,7 +76,10 @@ import { LoginComponent } from './paginas/login/login.component';
     NosotrosComponent,
     ProductosComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    LabialComponent,
+    OjosComponent,
+    RostroComponent
   ],
   imports: [
     BrowserModule,
