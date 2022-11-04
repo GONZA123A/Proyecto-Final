@@ -8,28 +8,21 @@ import { ProductosService } from 'src/app/servicios/productos.service';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  coleccionProductos: Producto[]=[]; 
- 
   producto: string[]=[]; //creamos un arreglo vacío
-  labial: Producto[]=[]
-  constructor(private servicioProductos: ProductosService){}
+
+  constructor(private servicioProductos: ProductosService) { //creamos una propiedad que contenga el valor del servicio de productos
+  }
+
+  coleccionProductos: Producto[]=[]; //creamos una coleccion productos que contenga la interface del model llamado Producto
 
 
   ngOnInit(): void {
-    this.servicioProductos.obtenerProducto().subscribe(producto =>{
+    
+    this.servicioProductos.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto
-      this.mostrarLabial()
-    }
-      );
+    });
+      
+  }
 
   }
 
-  mostrarLabial(){
-    this.coleccionProductos.forEach(producto=>{
-      if(producto.categoria==="Labial"){
-        this.labial.push(producto)
-      }
-    })
-  }
-
-}

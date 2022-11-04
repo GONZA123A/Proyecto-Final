@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Calesita } from 'src/app/models/calesita';
+import { CalesitaService } from 'src/app/servicios/calesita.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  calesita: string[]=[];
+  coleccionCalesita: Calesita []=[];
+  
+  constructor(private servicioCalesita: CalesitaService) { }
 
   ngOnInit(): void {
+    this.servicioCalesita.obtenerCalesita().subscribe(calesita => this.coleccionCalesita = calesita);
   }
-
 }

@@ -1,16 +1,13 @@
-<section class="divisor">
-    <h1>Productos</h1>
-    <hr>
-</section>
 
 <!--Card de productos-->
-<section class="top-productos" id="top-productos">
+<section class="top-productos" id="top-productos" >
     <div class="texto">
         <p>productos</p>
         <h1>Todos</h1>
+       
     </div>
     <div class="row productos">
-        <div class="col-3 tarjetas" *ngFor="let col of labial">
+        <div class="col-3 tarjetas" *ngFor="let col of coleccionProductos"  > <!--Se llama a la coleccion de productos para que se repita las veces en las que se agrega un dato-->
             <p-card  [style]="{width: '240px'}" >
 
                 <ng-template class="template" pTemplate="header" >
@@ -18,13 +15,13 @@
                 </ng-template>
                 <ng-template pTemplate="footer">
                     <div class="descripcion">
-                        <h2 class="tit">{{col.nombre}}</h2>
+                        <h2 class="tit">{{col.nombre}}</h2> <!--aparecen los datos de la coleccion de productos-->
                         <div class="price">{{col.marca}}</div>
                         <div class="price" style="margin-top: 10px; font-size:20px;" >${{col.precio}}</div>
                     </div>
 
                     <div class="iconos">
-                        <a href="" class="pi pi-heart-fill favorito"></a>
+                        <a href="" class="pi pi-heart-fill favorito"></a> 
                         <a href="" class="pi pi-shopping-cart carrito"></a>
                     </div>
                     
