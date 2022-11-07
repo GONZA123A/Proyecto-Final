@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+html{
+    font-size: 32.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.top-productos .productos{
+    margin: 30px;
+  
+}
+.top-productos{
+    
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.top-productos .productos .tarjetas{
+    margin: 20px;
+}
+
+.top-productos .productos .tarjetas .descripcion .tit{
+    font-size: 25px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.top-productos .productos .tarjetas .descripcion .price{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.top-productos .productos .tarjetas .pi {
+    margin-top: 20px;
+    font-size: 23px;
+    color: #e84393;
+    
+}
+
+.top-productos .productos .tarjetas .pi:hover{
+    font-size: 25px;
+}
+.top-productos .productos .carrito{
+    margin: 10px;
+}
+
+.top-productos .productos .favorito{
+    margin: 10px;
+    margin-right: 120px;
+
+}
+
+.top-productos .productos .tarjetas .descripcion span{
+    text-align: left;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.top-productos .texto{
+    padding-left: 40px;
+}
+
+.top-productos .texto h1{
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.top-productos .texto p{
+    text-align: left;
+    font-size: 19px;
+    color: #999;
+}
+
+@media (max-width:707px){
+    section{
+        padding: 10px;
+    }
+    .home{
+        background-position: left;
+    }
+}
+@media (max-width:441px){
+    .apartado{
+       display: none;
+    }
+
+    
+ 
+}
+.Caracteristicas{
+    font-size: 15px; 
+    color: #5c5c5c;
+    
+    display: flex;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #cccccc; 
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+.Tituto{
+    
+    font-size: 25px;
+    color: #222222;
+}

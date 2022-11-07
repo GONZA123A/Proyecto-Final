@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations' 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//Firebase
+import { AngularFireModule } from "@angular/fire/compat";
+import { initializeApp } from 'firebase/app';
+
 //componentes del Proyecto
 
 import { NavbarComponent } from './estructura/navbar/navbar.component';
@@ -11,9 +15,14 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 import { ProductosComponent } from './paginas/productos/productos.component';
+import { AdminComponent } from './paginas/admin/admin.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { LabialComponent } from './paginas/labial/labial.component';
+import { OjosComponent } from './paginas/ojos/ojos.component';
+import { RostroComponent } from './paginas/rostro/rostro.component';
 
 // servicios
-
+import { CalesitaService } from './servicios/calesita.service';
 import { UsuariosService } from './servicios/usuarios.service';
 import { StorageService } from './servicios/storage.service';
 import { ProductosService } from './servicios/productos.service';
@@ -56,11 +65,9 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PanelModule} from 'primeng/panel';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-//Firebase
-import { AngularFireModule } from "@angular/fire/compat";
-import { initializeApp } from 'firebase/app';
-import { AdminComponent } from './paginas/admin/admin.component';
-import { LoginComponent } from './paginas/login/login.component';
+
+
+
 
 
 @NgModule({
@@ -73,7 +80,10 @@ import { LoginComponent } from './paginas/login/login.component';
     NosotrosComponent,
     ProductosComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    LabialComponent,
+    OjosComponent,
+    RostroComponent
   ],
   imports: [
     BrowserModule,
@@ -123,7 +133,7 @@ import { LoginComponent } from './paginas/login/login.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
   ],
-  providers: [UsuariosService, StorageService, ProductosService],
+  providers: [UsuariosService, StorageService, ProductosService, CalesitaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

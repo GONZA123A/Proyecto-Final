@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    background-color: antiquewhite;
+}
+
+.footer{
+    padding: 40px 0;
+}
+
+.footer .social{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 24px;
+}
+
+
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 2px solid rgb(255, 102, 247);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer.social a:hover{
+    opacity: 0.9;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;   
+    text-align: center;
+}
+
+footer ul li a{
+    color: #000;
+    text-decoration: none;
+    opacity: 0.8;
+
+}
+
+
+#link { color: #000000; }
+
+#link:hover{ 
+    opacity: 2;
+    color: rgb(161, 161, 161);
+}
+
+.tarjetas{
+    text-align: center;
+    margin-top: 10px;
+}
+.tarjetas img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+.footer .copyright{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+    color: rgb(95, 95, 95);
+}

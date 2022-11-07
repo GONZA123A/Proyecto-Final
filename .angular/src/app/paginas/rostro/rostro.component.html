@@ -1,0 +1,29 @@
+<section class="top-productos" id="top-productos" style="margin-bottom: 20px;">
+    <div class="texto">
+        <p>Productos</p>
+        <h1>Rostro</h1>
+    </div>
+    <div class="row productos">
+        <div class="col-3 tarjetas" *ngFor="let col of rostro">
+            <p-card  [style]="{width: '240px'}" >
+
+                <ng-template class="template" pTemplate="header" >
+                    <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">
+                </ng-template>
+                <ng-template pTemplate="footer" let-rostro>
+                    <div class="descripcion">
+                        <h2 class="tit">{{col.nombre}}</h2>
+                        <div class="price">{{col.marca}}</div>
+                        <div class="price" style="margin-top: 10px; font-size:20px;" >${{col.precio}}</div>
+                    </div>
+
+                    <div class="iconos">
+                        <a href="" class="pi pi-heart-fill favorito"></a>
+                        <a href="" class="pi pi-shopping-cart carrito"></a>
+                    </div>
+                    
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</section>
