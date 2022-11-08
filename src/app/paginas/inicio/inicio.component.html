@@ -1,12 +1,70 @@
-<section class="ofertas" id="ofertas">
-    <div class="descuentos">
-        <div class="titulo">
-            <h2>DESTACADOS</h2>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Maquillaje</h3>
+        <span>de calidad</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur necessitatibus dolorem, blanditiis
+            debitis quo, sequi minus aut omnis assumenda sit. Porro qui dolor nam doloribus cumque! Dolor, non commodi?
+        </p>
+        <a href="#" class="btn">Compra ahora</a>
+    </div>
+</section>
+
+<section class="iconos" id="iconos">
+    <div class="row separador">
+        <div class="col-4 box1">
+            <i class="pi pi-box icon"></i>
+            <div class="info">
+                <h2>Envio Gratis</h2>
+                <p>en compras superiores a $2.000.</p>
+            </div>
         </div>
+        <div class="col-4 box1">
+            <i class="pi pi-map-marker icon"></i>
+            <div class="info">
+                <h2>Envios a todo el país</h2>
+                <p>o retira en nuestra tienda sin recargo.</p>
+            </div>
+        </div>
+        <div class="col-4 box1">
+            <i class="pi pi-money-bill icon"></i>
+            <div class="info">
+                <h2>Cuotas sin interés</h2>
+                <p>Pagá con Visa y Master en 3 y 6 <br>cuotas sin interés.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="separadorrosa">
+    <div class="textorosa">
+        <p>30% de descuento en el black friday - 10% de descuento con transferencia bancaria.</p>
+    </div>
+</section>
+
+<section class="ofertas">
+    <div class="textoofertas">
+        <div class="linea"></div>
+        <h3>Descuentos</h3>
+        <div class="linea2"></div>
+    </div>
+    <div class="descuentos">
         <p-carousel [value]="coleccionCalesita" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
             <ng-template let-calesita pTemplate="item">
                 <img [src]="calesita.imagen" style="margin-left:60px;" width="300px" height="300px" alt="">
             </ng-template>
         </p-carousel>
+    </div>
+</section>
+
+<section class="parallax">
+    <div class="tituloparallax">
+        TEMPORADA VERANO
+    </div>
+    <div class="descripcionparallax">
+        Encuentra los mejores productos para tu piel en verano.
+    </div>
+    <div class="botonparallax">
+        <a href="" class="btnparallax">Comprar</a>
     </div>
 </section>
