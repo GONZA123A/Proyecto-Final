@@ -335,12 +335,15 @@ export class AdminComponent implements OnInit {
 
   mostrarEliminarCalesita(calesitaSeleccionado: Calesita) {
     this.showModalCalesita()
-    this.calesitaSeleccionado = this.calesitaSeleccionado;
+    this.calesitaSeleccionado = calesitaSeleccionado;
   }
 
+  //BORRA LAS IMAGENES DE CALESITA
   borrarCalesita() {
     this.servicioCalesita
       .eliminarCalesita(this.calesitaSeleccionado.idcalesita)
+      
+
   }
 
   //se cargan las imagenes con su url

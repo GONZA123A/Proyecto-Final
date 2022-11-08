@@ -105,20 +105,6 @@ html{
     color: #999;
 }
 
-.parallax{
-    display: flex;
-    align-items: center;
-    height: 300px;
-    background:  no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1346px;
-}
-
 .separadorrosa{
     background-color: #e84393;
     position: static;
@@ -152,6 +138,65 @@ html{
     margin: 20px auto 0 auto;
 }
 
-.parallax .tituloparallax{
-    text-align: center;
+.parallax{
+    display: flex;
+    align-items: center;
+    height: 350px;
+    background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1346px;
+}
+
+.parallax{
+    margin-bottom: 20px;
+}
+.parallax .row{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #fff;
+    background-color: #e8439367;
+    padding: 30px;
+    padding-right: 180px;
+    border-radius: 2rem;
+}
+.parallax h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    letter-spacing: 8px;
+}
+
+.parallax h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.parallax h4{
+    margin-bottom: 20px;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+.parallax .row .btn2{
+    margin-top: 20px;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.parallax .row .btn2:hover{
+    background: pink;
 }
