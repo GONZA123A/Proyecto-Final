@@ -1,8 +1,45 @@
-<h2>Contacto</h2>
-<p-panel header="Header">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-</p-panel>
+<!-- Es el Contacto -->
+<section class="contacto">
+    <div class="container">
+        <div class="contacto-box">
+            <div class="izquierda">
+            </div>
+            <div class="derecha">
+                <h2>Contáctanos</h2>
+                <span class="p-float-label">
+                    <input id="float-input" class="formulario" type="text" pInputText> 
+                    <label for="float-input" class="label">Nombre</label>
+                </span>
+                <span class="p-float-label">
+                    <input id="float-input" class="formulario" type="text" pInputText> 
+                    <label for="float-input">Apellido</label>
+                </span>
+                <span class="p-float-label">
+                    <input id="float-input" type="text" class="formulario" pInputText> 
+                    <label for="float-input">Correo electrónico</label>
+                </span>
+                <span class="p-float-label">
+                    <textarea [rows]="5" [cols]="30" class="formulario"></textarea>
+                    <label for="float-input">Mensaje</label>
+                </span>
+                <button pButton routerLink="/productos" type="button" class="btn-producto">Enviar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<form class="form" action="https://formspree.io/f/{form_id}" method="post">
+    <div class="formulario">
+        <h2>Contáctanos</h2>
+        <label for="email">
+            Your Email
+            <input name="Email" id="email" type="email">
+        </label>
+        <label for="email">
+            Tu Mensaje
+            <input name="message" id="mensajee">
+        </label>
+        
+        <button type="submit">Enviar</button>
+    </div>
+</form>
