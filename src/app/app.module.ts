@@ -21,6 +21,7 @@ import { RostroComponent } from './paginas/rostro/rostro.component';
 import { UsuariosService } from './servicios/usuarios.service';
 import { StorageService } from './servicios/storage.service';
 import { ProductosService } from './servicios/productos.service';
+import { CalesitaService } from './servicios/calesita.service';
 
 // Componentes de PrimeNG
 import { MenubarModule } from 'primeng/menubar';
@@ -126,7 +127,7 @@ import { initializeApp } from 'firebase/app';
     DynamicDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [UsuariosService, StorageService, ProductosService], // patentación de servicios
+  providers: [UsuariosService, StorageService, ProductosService, CalesitaService], // patentación de servicios
   bootstrap: [AppComponent]
 })
 export class AppModule { }

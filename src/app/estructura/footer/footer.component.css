@@ -23,7 +23,7 @@ body{
 .footer .social a{
     font-size: 24px;
     color: inherit;
-    border: 2px solid rgb(255, 102, 247);
+    border: 2px solid #850E35;
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -60,7 +60,7 @@ footer ul li a{
 
 #link:hover{ 
     opacity: 2;
-    color: rgb(161, 161, 161);
+    color: #850E35;
 }
 
 .tarjetas{

@@ -1,5 +1,5 @@
 <!-- Es el Contacto -->
-<section class="contacto">
+<!-- <section class="contacto">
     <div class="container">
         <div class="contacto-box">
             <div class="izquierda">
@@ -26,20 +26,26 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<!-- Este es de Ampi -->
 
-<form class="form" action="https://formspree.io/f/{form_id}" method="post">
+<form class="form" action="mailto:vickingiediaz19@gmail.com" method="post" enctype="text/plain">
     <div class="formulario">
         <h2>Contáctanos</h2>
-        <label for="email">
+        <label for="name">
+            Nombre
+            <input name="user_name" id="nombre" type="text" pattern=".+@beststartupever\.com">
+        </label>
+        <label for="mail">
             Your Email
-            <input name="Email" id="email" type="email">
+            <input name="user_email" id="email" type="email">
         </label>
-        <label for="email">
+        <label for="msg">
             Tu Mensaje
-            <input name="message" id="mensajee">
+            <textarea name="user_message" id="mensaje"></textarea>
         </label>
-        
-        <button type="submit">Enviar</button>
+
+        <input type="submit" value="Enviar">
     </div>
 </form>
+<!-- Este el nuevo que estoy editando -->
