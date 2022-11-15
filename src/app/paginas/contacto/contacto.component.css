@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,10 +16,10 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 
-} */
+}
 
 /*le da todo el margen para moverlo al centro*/
-/* .contacto{
+.contacto{
     margin-left: 100px;
 }
 
@@ -34,7 +34,7 @@ html{
 }
 
 /*abarca toda la seccion del formulario y la imagen divisora*/
-/* .contacto-box{
+.contacto-box{
     max-width: 850px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -43,28 +43,29 @@ html{
     text-align: center;
     background-color: #fff;
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
-} */
+}
 
 /*es la sección de la izquierda que muestra la imagen*/
-/* .izquierda{
+.izquierda{
     height: 100%;
-    background-color: #7DCE13;
-} */
+    background-image: url("/assets/Imagenes/contacto.jpg");
+}
 
 /*es la sección de la derecha que muestra el formulario*/
-/* .derecha{
+.derecha{
     padding: 25px 40px;
-} */
+}
 
 /*el título*/
-/* h2{
+h2{
     padding-bottom: 10px;
     margin-bottom: 10px;
     position: relative;
-} */
+    color: #850E35;
+}
 
 /* Formulario de Contacto */
-/* .formulario{
+.formulario{
     width: 100%;
     padding:  0.5rem 1rem;
     outline: none;
@@ -73,39 +74,27 @@ html{
     font-size: 1.1rem;
     margin-bottom: 22px;
     transition: .3s;
-} */
+}
 
 /* Ver más */
-/* .btn-producto{
+.btn-producto{
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background-color: #333;
+    background-color: #850E35;
     color: aliceblue;
     padding: .7rem 2rem;
     cursor: pointer;
     font-size: 18px;
     
-} */
-
-/*es el boton del formulario*/
-/* .boton{
-    text-align: center;
-} */
-
-/*es el boton del formulario que si se toca cambia de color*/
-/* .btn-producto:hover{
-    background-color: #8aa2ce;
-} */
-
-.form{
-    text-align: center;
-    padding: 40px;
 }
 
-.label{
-    margin: 2%;
-    height: 5%;
-    display: inline-block;
+/*es el boton del formulario*/
+.boton{
     text-align: center;
+}
+
+/*es el boton del formulario que si se toca cambia de color*/
+.btn-producto:hover{
+    background-color: #EE6983;
 }

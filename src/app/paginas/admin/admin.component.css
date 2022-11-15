@@ -1,11 +1,19 @@
+.categoria{
+    text-align: center;
+}
+
 #editar{
-    background-color: #B3FFAE;
+    background-color: #A8E890;
+    border-color: white;
 }
 
 #eliminar{
-    background-color: #FF6464;
+    background-color: #E64848;
+    border-color: white;
+
 }
 
 #agregar{
-    background-color: #9ED5C5;
+    background-color: #59C1BD;
+    border-color: white;
 }
