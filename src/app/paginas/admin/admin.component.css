@@ -1,10 +1,26 @@
+.row{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+#calesita{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+
 .categoria{
     text-align: center;
 }
 
 #editar{
-    background-color: #A8E890;
+    background-color: #8BDB81;
     border-color: white;
+}
+
+#editar:hover{
+    background-color: #5FD068;
 }
 
 #eliminar{
@@ -13,7 +29,15 @@
 
 }
 
+#eliminar:hover{
+    background-color: #EB1D36;
+}
+
 #agregar{
     background-color: #59C1BD;
     border-color: white;
+}
+
+#agregar:hover{
+    background-color: #219F94;
 }
