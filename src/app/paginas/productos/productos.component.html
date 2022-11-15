@@ -1,19 +1,21 @@
 
 <!--Card de productos-->
 <section class="top-productos" id="top-productos" >
-    <div class="texto">
-        <p>productos</p>
-        <h1>Todos</h1>
+  <div class="container">
+    <div class="texto" >
+        <h1 style="text-align: center;">Productos</h1>
+        <h1 style="text-align: center;">Todos</h1>
        
     </div>
+  </div>
     <div class="row productos">
-        <div class="col-3 tarjetas" *ngFor="let col of coleccionProductos"  > <!--Se llama a la coleccion de productos para que se repita las veces en las que se agrega un dato-->
-            <p-card  [style]="{width: '240px'}" >
+        <div class="col-3 tarjetas" *ngFor="let col of coleccionProductos"  style="margin-left: 55px;"> <!--Se llama a la coleccion de productos para que se repita las veces en las que se agrega un dato-->
+            <p-card  [style]="{width: '260px'}" >
 
                 <ng-template class="template" pTemplate="header" >
                     <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">
                 </ng-template>
-                <ng-template pTemplate="footer">
+                
                     <div class="descripcion">
                         <h2 class="tit">{{col.nombre}}</h2> <!--aparecen los datos de la coleccion de productos-->
                         <div class="price">{{col.marca}}</div>
@@ -25,10 +27,11 @@
                         <a href="" class="pi pi-shopping-cart carrito"></a>
                     </div>
                     <p-button (click)="showBasicDialog(col)" icon="pi pi-external-link" label="Ver mas"></p-button> 
-                </ng-template>
+                
             </p-card>
         </div>
     </div>
+  
 </section>
 <p-dialog  header="Caracteristicas" [(visible)]="modalVisible" [style]="{width: '50vw'}">
   <ng-container *ngIf="modalVisible">

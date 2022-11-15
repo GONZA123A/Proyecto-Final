@@ -1,16 +1,16 @@
 <section class="top-productos" id="top-productos">
     <div class="texto">
-        <p>Productos</p>
-        <h1>Ojos</h1>
+        <h1 style="text-align: center;">Productos</h1>
+        <h1 style="text-align: center;">Ojos</h1>
     </div>
     <div class="row productos">
-        <div class="col-3 tarjetas" *ngFor="let col of ojos">
-            <p-card  [style]="{width: '240px'}" >
+        <div class="col-3 tarjetas" *ngFor="let col of ojos" style="margin-left: 55px;">
+            <p-card  [style]="{width: '260px'}" >
 
                 <ng-template class="template" pTemplate="header" >
                     <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">
                 </ng-template>
-                <ng-template pTemplate="footer" let-ojos>
+                
                     <div class="descripcion">
                         <h2 class="tit">{{col.nombre}}</h2>
                         <div class="price">{{col.marca}}</div>
@@ -22,7 +22,7 @@
                         <a href="" class="pi pi-shopping-cart carrito"></a>
                     </div>
                     <p-button (click)="showBasicDialog(col)" icon="pi pi-external-link" label="Ver mas"></p-button>
-                </ng-template>
+                
             </p-card>
         </div>
     </div>
