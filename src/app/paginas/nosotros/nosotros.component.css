@@ -1,0 +1,27 @@
+.p-panel{
+    width: 21%;
+    margin: 2%;
+    height: 5%;
+    display: inline-block;
+}
+
+.card{
+    margin: 2%;
+    height: 5%;
+    border: solid 4px #FFB9B9;
+    display: inline-block;
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+}
+
+a{
+    color: #000000;
+}
+
+a:hover{
+    color: #EE6983;
+}
