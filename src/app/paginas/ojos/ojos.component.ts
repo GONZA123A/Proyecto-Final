@@ -8,7 +8,8 @@ import { ProductosService } from 'src/app/servicios/productos.service';
   styleUrls: ['./ojos.component.css']
 })
 export class OjosComponent implements OnInit {
-
+  productoSeleccionado:Producto
+  modalVisible:boolean=false;
   producto: string[]=[]; //creamos un arreglo vacío
   ojos: Producto[]=[]; //en el arreglo colocamos la interface de producto
 
@@ -26,7 +27,11 @@ export class OjosComponent implements OnInit {
     });
       
   }
+  showBasicDialog(info:Producto){
+    this.modalVisible=true;
+    this.productoSeleccionado=info;
 
+    }
   mostrarOjos(){ //mostrar ojos tiene la coleccion de productos que contiene el producto, donde se guardan los formularios o datos guardados
     this.coleccionProductos.forEach(producto=>{
       if(producto.categoria==="ojos"){ //si los datos en la categoria son iguales a ojos, aparecerán en la card que tiene el componente ojos

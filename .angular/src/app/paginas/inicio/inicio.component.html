@@ -1,0 +1,12 @@
+<section class="ofertas" id="ofertas">
+    <div class="descuentos">
+        <div class="titulo">
+            <h2>DESTACADOS</h2>
+        </div>
+        <p-carousel [value]="coleccionCalesita" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+            <ng-template let-calesita pTemplate="item">
+                <img [src]="calesita.imagen" style="margin-left:60px;" width="300px" height="300px" alt="">
+            </ng-template>
+        </p-carousel>
+    </div>
+</section>

@@ -31,6 +31,7 @@ export class AdminComponent implements OnInit {
     marca: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     categoria: new FormControl('', Validators.required),
+    descripcion: new FormControl('', Validators.required),
     // imagen: new FormControl('', Validators.required),
   });
   //se hace un arreglo con formgroup con cada dato que tenga
@@ -40,6 +41,8 @@ export class AdminComponent implements OnInit {
 
   //se declara y se declaran sus tipos o valores
   imagen: string;
+  imagen1: string;
+  imagen2: string; 
   textBoton: string;
   //esto es de producto
   productoSeleccionado: Producto;
@@ -109,10 +112,13 @@ export class AdminComponent implements OnInit {
         marca: this.producto.value.marca!,
         precio: this.producto.value.precio!,
         categoria: this.producto.value.categoria!,
+        descripcion: this.producto.value.descripcion!,
         imagen: "",
+        imagen1: "",
+        imagen2: "",
         idproductos: '',
       };
-      this.storage.subirImagen(this.nombre, this.imagen, "productos").then(
+      this.storage.subirImagen(this.nombre, this.imagen,"productos").then(
         resp => {
           this.storage.obtenerUrlImage(resp)
             .then(
@@ -165,7 +171,10 @@ export class AdminComponent implements OnInit {
       marca: this.producto.value.marca!,
       precio: this.producto.value.precio!,
       categoria: this.producto.value.categoria!,
+      descripcion: this.producto.value.descripcion!,
       imagen: this.productoSeleccionado.imagen,
+      imagen2: this.productoSeleccionado.imagen2,
+      imagen1: this.productoSeleccionado.imagen1,
       idproductos: this.productoSeleccionado.idproductos,
     };
     this.servicioProductos
@@ -192,6 +201,8 @@ export class AdminComponent implements OnInit {
       marca: productoSeleccionado.marca,
       precio: productoSeleccionado.precio,
       categoria: productoSeleccionado.categoria,
+      descripcion: productoSeleccionado.descripcion,
+      
     });
   }
 

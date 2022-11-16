@@ -1,0 +1,14 @@
+<p-menubar [model]="items" [style]="{'background-color': 'pink'}">
+    <ng-template pTemplate="start">
+        <h2>
+            <img src="/assets/Imagenes/icono.png" height="25" class="mr-2" alt="ícono">
+            Paris
+        </h2>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-heart"></button>
+        <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-shopping-cart"></button>
+        <button type="button" pButton pRipple class="p-button-text" id="boton" routerLink="/login" icon="pi pi-user"></button>
+    </ng-template>
+</p-menubar>
+

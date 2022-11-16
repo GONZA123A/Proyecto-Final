@@ -1,0 +1,14 @@
+<!-- Acá se presenta un formulario para ingresar el usuario y contraseña -->
+        <form [formGroup]="Usuarios">
+            <!-- Label Nombre Usuario -->
+            <span class="p-float-label">
+                <h2>Usuario</h2>
+                <input type="text" id="float-input" pInputText formControlName="username">
+            </span>
+            <!-- Label Contraseña -->
+            <span class="p-float-label">
+                <h2>Contraseña</h2>
+                <input type="password" id="float-input" pInputText formControlName="password">
+            </span>
+            <button id="boton" style="margin-top: 15px;" pButton pRipple type="submit" class="p-button-rounded p-button-info" (click)="iniciaSesion()" label="Ingresar"></button>
+        </form>

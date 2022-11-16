@@ -9,7 +9,8 @@ import { ProductosService } from 'src/app/servicios/productos.service';
 })
 export class LabialComponent implements OnInit {
 
-  
+   productoSeleccionado:Producto
+  modalVisible:boolean=false;
   producto: string[]=[]; //creamos un arreglo vacío
   labial: Producto[]=[]; //en el arreglo colocamos la interface de producto
 
@@ -27,7 +28,11 @@ export class LabialComponent implements OnInit {
     });
       
   }
+  showBasicDialog(info:Producto){
+    this.modalVisible=true;
+    this.productoSeleccionado=info;
 
+    }
   mostrarLabial(){ //mostrar labial tiene la coleccion de productos que contiene el producto, donde se guardan los formularios o datos guardados
     this.coleccionProductos.forEach(producto=>{
       if(producto.categoria==="labial"){ //si los datos en la categoria son iguales a labial, aparecerán en la card que tiene el html de Labial

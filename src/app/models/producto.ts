@@ -4,5 +4,8 @@ export interface Producto {
     categoria: string,
     marca: string,
     precio: number,
-    idproductos: string
+    idproductos: string,
+    imagen1: string,
+    imagen2: string,
+    descripcion: string
 }

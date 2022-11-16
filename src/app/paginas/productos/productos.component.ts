@@ -9,6 +9,8 @@ import { ProductosService } from 'src/app/servicios/productos.service';
 })
 export class ProductosComponent implements OnInit {
   producto: string[]=[]; //creamos un arreglo vacío
+  productoSeleccionado:Producto
+  modalVisible:boolean=false;
 
   constructor(private servicioProductos: ProductosService) { //creamos una propiedad que contenga el valor del servicio de productos
   }
@@ -23,6 +25,11 @@ export class ProductosComponent implements OnInit {
     });
       
   }
+  showBasicDialog(info:Producto){
+    this.modalVisible=true;
+    this.productoSeleccionado=info;
+
+    }
 
   }
 

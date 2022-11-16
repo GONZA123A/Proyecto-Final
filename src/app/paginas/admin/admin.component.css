@@ -1,0 +1,60 @@
+.row {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+#calesita {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+
+.categoria {
+    text-align: center;
+}
+
+/* BOTONES */
+#editar {
+    background-color: #8BDB81;
+    border-color: white;
+    color: white;
+}
+
+#editar:hover {
+    background-color: #5FD068;
+    color: white;
+}
+
+#eliminar {
+    background-color: #E64848;
+    border-color: white;
+    color: white;
+
+
+}
+
+#eliminar:hover {
+    background-color: #EB1D36;
+    color: white;
+}
+
+#agregar{
+    background-color:  rgb(66, 180, 233);
+    border-color: white;
+    color: white;
+}
+
+#agregar:hover{
+    background-color: #219F94;
+    color: white;
+}
+
+body {
+    background-image: "url(https://img.freepik.com/foto-gratis/vista-superior-surtido-productos-maquillaje-belleza_23-2148620013.jpg?w=2000)";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}

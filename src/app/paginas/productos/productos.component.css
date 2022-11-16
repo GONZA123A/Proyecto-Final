@@ -34,7 +34,6 @@ html{
     font-size: 25px;
     color: #333;
     font-weight: 600;
-    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -101,4 +100,19 @@ html{
 
     
  
+}
+.Caracteristicas{
+    font-size: 15px; 
+    color: #5c5c5c;
+    
+    display: flex;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #cccccc; 
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+.Tituto{
+    
+    font-size: 25px;
+    color: #222222;
 }

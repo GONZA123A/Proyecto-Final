@@ -9,7 +9,8 @@ import { ProductosService } from 'src/app/servicios/productos.service';
 })
 export class RostroComponent implements OnInit {
 
-  
+  productoSeleccionado:Producto
+  modalVisible:boolean=false;
   producto: string[]=[]; //creamos un arreglo vacío
   rostro: Producto[]=[]; //en el arreglo colocamos la interface de producto
 
@@ -27,6 +28,11 @@ export class RostroComponent implements OnInit {
     });
       
   }
+  showBasicDialog(info:Producto){
+    this.modalVisible=true;
+    this.productoSeleccionado=info;
+
+    }
 
   mostrarRostro(){ //mostrar rostro tiene la coleccion de productos que contiene el producto, donde se guardan los formularios o datos guardados
     this.coleccionProductos.forEach(producto=>{
