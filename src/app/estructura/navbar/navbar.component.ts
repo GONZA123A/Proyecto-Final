@@ -43,12 +43,17 @@ export class NavbarComponent implements OnInit {
         icon: "pi pi-list",
         items: [
           {
+            label: "Todos",
+            icon: "",
+            routerLink: "/productos"
+          },
+          {
             label: "Ojos",
             icon: "",
             routerLink: "/ojos"
           },
           {
-            label: "Labial",
+            label: "Labios",
             icon: "",
             routerLink: "/labial"
           },

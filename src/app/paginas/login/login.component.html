@@ -21,7 +21,12 @@
                     <!-- Label Contraseña -->
                 <input autocomplete="off" id="logpass" placeholder="Password" class="input-field" name="logpass"  formControlName="password" type="password">
             </div>
-            <button class="btn" type="submit" (click)="iniciaSesion()" label="Ingresar">Ingresar</button>
+            <a class="fancy">
+                <span class="top-key"></span>
+                <span class="text" (click)="iniciaSesion()" label="Ingresar">Ingresar</span>
+                <span class="bottom-key-1"></span>
+                <span class="bottom-key-2"></span>
+            </a>
         </form>
     </div>
 </div>
