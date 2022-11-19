@@ -41,7 +41,7 @@ html{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
+    background-color: #FFF;
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 }
 
@@ -70,13 +70,14 @@ h2{
     padding:  0.5rem 1rem;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0);
-    background-color: rgba(230, 230, 230, 0.6);
+    background-color: #FFF;
+    border-color: #FFDDD2;
     font-size: 1.1rem;
     margin-bottom: 22px;
     transition: .3s;
 }
 
-/* Ver más */
+/* Enviar */
 .btn-producto{
     display: inline-block;
     margin-top: 1rem;
@@ -98,3 +99,51 @@ h2{
 .btn-producto:hover{
     background-color: #EE6983;
 }
+
+/* Diseño y Movimiento de Formulario */
+.form-control {
+    position: relative;
+    /* margin: 20px 0 40px;
+    width: 190px; */
+  }
+  
+  /* Letras de Input */
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #FFDDD2 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: #000;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  /* Letras estáticas */
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #850E35;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* Letras elevadas */
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: #850E35;
+    transform: translateY(-30px);
+  }
