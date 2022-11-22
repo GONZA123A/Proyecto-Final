@@ -1,0 +1,134 @@
+/* row general */
+.row {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* div para centralizar parte de redes sociales*/
+.social_media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-panel {
+  width: 21%;
+  margin: 2%;
+  height: 5%;
+  display: inline-block;
+}
+
+p-divider {
+  color: #850E35;
+}
+
+.titulo {
+  text-align: center;
+  color: #850E35;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.texto {
+  font-size: 20px;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: #850E35;
+}
+
+i {
+  padding-bottom: 5px;
+  font-size: 25px;
+}
+
+/* Tarjetas de Redes Sociales */
+.card {
+  --bg: #FFFF;
+  --hover-bg: #FFE5F4;
+  --hover-text: #850E35;
+  max-width: 23ch;
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 2%;
+  height: 170px;
+  border: solid 4px #FFF5E4;
+  display: inline-block;
+  text-align: center;
+}
+
+.card__body {
+  color: #850E35;
+  line-height: 1.5em;
+  font-size: 1em;
+  padding: 4px;
+}
+
+.card> :not(span) {
+  transition: .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card>strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover>div,
+.card:hover>strong {
+  opacity: 0;
+}
+
+.subtitulo{
+  margin-top: 20px;
+  font-size: 45px;
+  font-family: 'Asap', sans-serif;
+}
+
+.subtitulo2{
+  font-size: 30px;
+  font-family: 'Asap', sans-serif;
+}
+
+.textito{
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+}
