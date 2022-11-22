@@ -2,8 +2,8 @@
     color: gray;
 }
 
-p-menubar{
-
+h2{
+    cursor: pointer;
 }
 
 @media (max-width:958px){

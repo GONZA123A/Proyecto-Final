@@ -44,11 +44,31 @@ export class UsuariosService {
               })
               this.router.navigate(["/admin"]); //se redirige al usuario al admin
             }
+          }if(form.value.password !== usuario.contrasena){
+            Swal.fire({ //es una alerta de error de sweetalert2.
+              icon: 'error',
+              title: 'Oops...',
+              text: 'La contraseña es incorrecta',
+            })
+          }if(form.value.username !== usuario.usuario){
+            Swal.fire({ //es una alerta de error de sweetalert2.
+              icon: 'error',
+              title: 'Oops...',
+              text: 'El usuario es incorrecto',
+            })
+          }if(form.value.username.valid == " "){
+            if(form.value.password ==" "){
+              Swal.fire({ //es una alerta de error de sweetalert2.
+                icon: 'error',
+                title: 'Oops...',
+                text: 'los campos están vacíos',
+              })
+            }
           }else{ //si no se pudo cumplir lo anterior, se muestra una alerta.
             Swal.fire({ //es una alerta de error de sweetalert2.
               icon: 'error',
               title: 'Oops...',
-              text: (texto),
+              text: 'Los datos ingresados son incorrectos',
             })
           }
         }
