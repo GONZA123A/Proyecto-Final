@@ -1,4 +1,4 @@
-<!-- Es el Contacto -->
+
 <section class="contacto">
     <div class="container">
         <div class="contacto-box">
@@ -6,23 +6,73 @@
             </div>
             <div class="derecha">
                 <h2>Contáctanos</h2>
+                <form [formGroup]="mensaje">
                 <span class="p-float-label">
-                    <input id="float-input" class="formulario" type="text" pInputText> 
-                    <label for="float-input" class="label">Nombre</label>
+                    <div class="form-control">
+                        <input id="float-input" class="formulario" type="text"  formControlName="nombre" pInputText required="">
+                        <label>
+                            <span style="transition-delay:0ms">N</span>
+                            <span style="transition-delay:50ms">o</span>
+                            <span style="transition-delay:100ms">m</span>
+                            <span style="transition-delay:150ms">b</span>
+                            <span style="transition-delay:200ms">r</span>
+                            <span style="transition-delay:250ms">e</span>
+                        </label>
+                    </div>
                 </span>
                 <span class="p-float-label">
-                    <input id="float-input" class="formulario" type="text" pInputText> 
-                    <label for="float-input">Apellido</label>
+                    <div class="form-control">
+                        <input id="float-input" class="formulario" type="text" formControlName="apellido"  pInputText required="">
+                        <label>
+                            <span style="transition-delay:0ms">A</span>
+                            <span style="transition-delay:50ms">p</span>
+                            <span style="transition-delay:100ms">e</span>
+                            <span style="transition-delay:150ms">l</span>
+                            <span style="transition-delay:200ms">l</span>
+                            <span style="transition-delay:250ms">i</span>
+                            <span style="transition-delay:300ms">d</span>
+                            <span style="transition-delay:350ms">o</span>
+                        </label>
+                    </div>
                 </span>
                 <span class="p-float-label">
-                    <input id="float-input" type="text" class="formulario" pInputText> 
-                    <label for="float-input">Correo electrónico</label>
+                    <div class="form-control">
+                        <input id="float-input" class="formulario" type="text" formControlName="correoElectronico"  pInputText required="">
+                        <label>
+                            <span style="transition-delay:0ms">C</span>
+                            <span style="transition-delay:50ms">o</span>
+                            <span style="transition-delay:100ms">r</span>
+                            <span style="transition-delay:150ms">r</span>
+                            <span style="transition-delay:200ms">e</span>
+                            <span style="transition-delay:250ms">o</span>
+                            <span style="transition-delay:300ms"> </span>
+                            <span style="transition-delay:350ms">E</span>
+                            <span style="transition-delay:400ms">l</span>
+                            <span style="transition-delay:450ms">e</span>
+                            <span style="transition-delay:500ms">c</span>
+                            <span style="transition-delay:550ms">t</span>
+                            <span style="transition-delay:600ms">r</span>
+                            <span style="transition-delay:650ms">o</span>
+                            <span style="transition-delay:700ms">n</span>
+                            <span style="transition-delay:750ms">i</span>
+                            <span style="transition-delay:800ms">c</span>
+                            <span style="transition-delay:850ms">o</span>
+                        </label>
+                    </div>
                 </span>
                 <span class="p-float-label">
-                    <textarea [rows]="5" [cols]="30" class="formulario"></textarea>
-                    <label for="float-input">Mensaje</label>
+                    <div class="form-control">
+                        <h2 class="contacttit">Escriba su mensaje aquí</h2>
+                        <textarea [rows]="5" [cols]="30" class="formulario" placeholder="Mensaje" required="" formControlName="mensaje" ></textarea>
+                    </div>
                 </span>
-                <button pButton routerLink="/productos" type="button" class="btn-producto">Enviar</button>
+                <a class="fancy" (click)="cargarDatos()">
+                    <span class="top-key"></span>
+                    <span class="text" label="Ver mas">Enviar</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                </a>
+            </form>
             </div>
         </div>
     </div>

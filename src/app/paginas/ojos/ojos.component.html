@@ -1,90 +1,114 @@
 <section class="top-productos" id="top-productos">
-    <div class="texto">
-        <p>Productos</p>
-        <h1>Ojos</h1>
-    </div>
-    <div class="row productos">
-        <div class="col-3 tarjetas" *ngFor="let col of ojos">
-            <p-card  [style]="{width: '240px'}" >
+  <div class="texto">
+    <h1 style="text-align: center;" class="subtitulo">Productos</h1>
+    <h1 style="text-align: center;" class="titulo">Ojos</h1>
+  </div>
+  <div class="row productos">
+    <div class="col-3 tarjetas" *ngFor="let col of ojos" style="margin-left: 70px;">
+      <p-card [style]="{width: '300px'}">
 
-                <ng-template class="template" pTemplate="header" >
-                    <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">
-                </ng-template>
-                <ng-template pTemplate="footer" let-ojos>
-                    <div class="descripcion">
-                        <h2 class="tit">{{col.nombre}}</h2>
-                        <div class="price">{{col.marca}}</div>
-                        <div class="price" style="margin-top: 10px; font-size:20px;" >${{col.precio}}</div>
-                    </div>
+        <ng-template class="template" pTemplate="header">
+          <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">
+        </ng-template>
 
-                    <div class="iconos">
-                        <a href="" class="pi pi-heart-fill favorito"></a>
-                        <a href="" class="pi pi-shopping-cart carrito"></a>
-                    </div>
-                    <p-button (click)="showBasicDialog(col)" icon="pi pi-external-link" label="Ver mas"></p-button>
-                </ng-template>
-            </p-card>
+        <div class="descripcion">
+          <h2 class="tit">{{col.nombre}}</h2>
+          <div class="price">{{col.marca}}</div>
+          <div class="price" style="margin-top: 10px; font-size:20px;">${{col.precio}}</div>
         </div>
+
+        <div class="iconos">
+          <a class="pi pi-heart-fill favorito" style="cursor: pointer;"></a>
+          <a class="pi pi-shopping-cart carrito" style="cursor: pointer;"></a>
+        </div>
+        <a class="fancy" (click)="showBasicDialog(col)">
+          <span class="top-key"></span>
+          <span class="text" label="Ver mas">Ver más</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </p-card>
     </div>
+  </div>
 </section>
-<p-dialog  header="Caracteristicas" [(visible)]="modalVisible" [style]="{width: '50vw'}">
-    <ng-container *ngIf="modalVisible">
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="Titulo">{{productoSeleccionado.nombre}}</h1>
-        </div>
-        
-        <div class="col-lg-8">
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              
+
+<p-dialog header="" [(visible)]="modalVisible" [style]="{width: '50vw'}">
+  <ng-container *ngIf="modalVisible" class="caracteristicas">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="Titulo">{{productoSeleccionado.nombre}}</h1>
+      </div>
+
+      <div class="col-lg-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img [src]="productoSeleccionado.imagen" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img [src]="productoSeleccionado.imagen" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img [src]="productoSeleccionado.imagen1" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img [src]="productoSeleccionado.imagen2" class="d-block w-100" alt="...">
-              </div>
+            <div class="carousel-item">
+              <img [src]="productoSeleccionado.imagen1" class="d-block w-100" alt="...">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div> 
-         
-        </div>
-        <div class="col-lg-4">
-          <div class="row">
-           
-            <div class="col-12">
-              <div class="Caracteristicas" style="border-top: 1px solid #CCCCCC; ">Marca: {{productoSeleccionado.marca}}</div>
-              <div class="Caracteristicas">Descripcion: {{productoSeleccionado.descripcion}}</div> 
-              <div class="Caracteristicas">Precio: ${{productoSeleccionado.precio}}</div> 
+            <div class="carousel-item">
+              <img [src]="productoSeleccionado.imagen2" class="d-block w-100" alt="...">
             </div>
           </div>
-        </div> 
-   
-      </div> 
-      
-      
-    </ng-container>
-    <ng-template pTemplate="footer">
-      <p-button icon="pi pi-times" (click)="modalVisible=false" label="Salir" styleClass="p-button-text"></p-button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="row contenido">
+          <div class="col-12">
+            <div class="marca">{{productoSeleccionado.marca}}</div>
+            <div class="precio"> <strong>${{productoSeleccionado.precio}} ARS</strong> </div>
+            <!--se encuentra el boton de me gusta-->
+            <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button">
+            <label for="favorite" class="container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-heart">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+              <div class="action">
+                <span class="option-1">Añadir a Favoritos </span>
+                <span class="option-2">Eliminar de Favoritos</span>
+              </div>
+            </label>
+            <div class="descripcion">{{productoSeleccionado.descripcion}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template pTemplate="footer">
+    <button class="botoncoleccion" (click)="modalVisible=false" label="Salir">
+      <p>Salir</p>
+      <svg class="svgcoleccion" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+      </svg>
+    </button>
   </ng-template>
-  </p-dialog>  
+
+</p-dialog>

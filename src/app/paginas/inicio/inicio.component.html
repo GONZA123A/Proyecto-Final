@@ -1,11 +1,18 @@
+
 <section class="home" id="home"><!-- es la parte inicial, acá tenes la imagen grande y textos-->
     <div class="content">
         <h3>Maquillaje</h3>
-        <span>de calidad</span>
-        <p> Paris implementó a su tienda productos importados de varias <br>
-            partes del mundo, si quieres saber más de ello, toca el botón.
+        <h1>de calidad</h1>
+        <p> Paris implementó a su tienda productos <br>
+            importados de varias partes del mundo, <br>
+            si quieres saber más de ello, toca el botón.
         </p>
-        <a href="#" class="btn">Compra ahora</a>
+        <button class="cta" routerLink="/productos">
+            <span class="hover-underline-animation"> Shop now </span>
+            <svg viewBox="0 0 46 16" height="30" width="50" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+            </svg>
+        </button>
     </div>
 </section>
 
@@ -48,11 +55,14 @@
 <section class="parallax"> <!--el separador tiene un efecto parallax y habla de la coleccion de verano-->
     <div class="row">
         <h1>¡COLECCIÓN <br> V E R A N O!</h1>
-        <h3>Mira los nuevos productos</h3>
-        <h4>maquillaje para esta estación.</h4>
-        <div class="bor">
-            <a href="#" class="btn2">Ver ahora</a>
-        </div>
+        <h3>¡Mira los nuevos productos!</h3>
+        <h4>Maquillaje para esta estación.</h4>
+        <button class="botoncoleccion">
+            <p routerLink="/productos">Ver más</p>
+            <svg class="svgcoleccion" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+        </button>
        
     </div>
 
@@ -80,3 +90,5 @@
         </p-carousel>
     </div>
 </section>
+
+

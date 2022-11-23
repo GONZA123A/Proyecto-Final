@@ -1,3 +1,17 @@
 #boton{
     color: gray;
 }
+
+h2{
+    cursor: pointer;
+}
+
+@media (max-width:958px){
+    p-menubar{
+        align-items: center;
+        width: 1480px;
+    }
+}
+
+
+
