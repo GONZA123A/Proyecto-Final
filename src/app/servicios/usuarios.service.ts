@@ -64,13 +64,8 @@ export class UsuariosService {
                 text: 'los campos están vacíos',
               })
             }
-          }else{ //si no se pudo cumplir lo anterior, se muestra una alerta.
-            Swal.fire({ //es una alerta de error de sweetalert2.
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Los datos ingresados son incorrectos',
-            })
           }
+          
         }
       )
   
