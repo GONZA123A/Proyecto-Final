@@ -298,21 +298,30 @@ export class AdminComponent implements OnInit {
 
   //permite editar los datos o el formulario
   editarCalesita() {
-    let datos: Calesita = {
-      imagen: this.calesitaSeleccionado.imagen,
-      idcalesita: this.calesitaSeleccionado.idcalesita,
-    };
-    this.servicioCalesita
-      .modificarCalesita(this.calesitaSeleccionado.idcalesita, datos)
-      .then((calesita) => {
-        Swal.fire({ //es una alerta de sweetalert2
-          position: 'top-end',
-          icon: 'success',
-          title: 'El producto se ha subido correctamente',
-          showConfirmButton: false,
-          timer: 1500
-        })
-      });
+    this.storage.subirImagen(this.nombre,this.imagen,'calesita').then(
+      resultado=>{
+        this.storage.obtenerUrlImage(resultado).then(
+          url=>{
+            let datos: Calesita = {
+              imagen: url,
+              idcalesita: this.calesitaSeleccionado.idcalesita,
+            };
+            this.servicioCalesita
+              .modificarCalesita(this.calesitaSeleccionado.idcalesita, datos)
+              .then((calesita) => {
+                Swal.fire({ //es una alerta de sweetalert2
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'El producto se ha subido correctamente',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              });
+          }
+        )
+      }
+    )
+    
   }
   
   //muestra lo que se puede editar
@@ -335,12 +344,15 @@ export class AdminComponent implements OnInit {
 
   mostrarEliminarCalesita(calesitaSeleccionado: Calesita) {
     this.showModalCalesita()
-    this.calesitaSeleccionado = this.calesitaSeleccionado;
+    this.calesitaSeleccionado = calesitaSeleccionado;
   }
 
+  //BORRA LAS IMAGENES DE CALESITA
   borrarCalesita() {
     this.servicioCalesita
       .eliminarCalesita(this.calesitaSeleccionado.idcalesita)
+      
+
   }
 
   //se cargan las imagenes con su url

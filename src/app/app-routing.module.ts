@@ -4,6 +4,7 @@ import { AdminComponent } from './paginas/admin/admin.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
 import { LabialComponent } from './paginas/labial/labial.component';
+import { LoginComponent } from './paginas/login/login.component';
 import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 import { OjosComponent } from './paginas/ojos/ojos.component';
 import { ProductosComponent } from './paginas/productos/productos.component';
@@ -36,6 +37,9 @@ const routes: Routes = [
   },
   {
     path:'admin',component:AdminComponent
+  },
+  {
+    path:'login',component:LoginComponent
   }
 ];
 

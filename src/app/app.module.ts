@@ -13,6 +13,7 @@ import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 import { ProductosComponent } from './paginas/productos/productos.component';
 import { AdminComponent } from './paginas/admin/admin.component';
+import { LoginComponent } from './paginas/login/login.component';
 import { OjosComponent } from './paginas/ojos/ojos.component';
 import { LabialComponent } from './paginas/labial/labial.component';
 import { RostroComponent } from './paginas/rostro/rostro.component';
@@ -78,7 +79,8 @@ import { initializeApp } from 'firebase/app';
     AdminComponent,
     OjosComponent,
     LabialComponent,
-    RostroComponent
+    RostroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

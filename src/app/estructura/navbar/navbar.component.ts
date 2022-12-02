@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { Usuarios } from 'src/app/models/usuario';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +10,17 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  //declaraciones
   items: MenuItem[] = [];
+  adminVisible = false;
+
+   //modalvisible es para mostrar el form
+   modalVisible : boolean = false;
+
 
   constructor() { }
 
-  // Menu e items
   ngOnInit():void{
     this.items = [
       {
@@ -55,11 +64,10 @@ export class NavbarComponent implements OnInit {
           }
         ]
       },
-      // el admin se oculta mientras el usuario no se haya logueado
       {
         label: "Admin",
         icon: "pi pi-user",
-        routerLink: "/admin"
+        routerLink: "/admin",
       }
     ];
   }

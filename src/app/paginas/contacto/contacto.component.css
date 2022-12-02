@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 32.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -19,11 +19,11 @@ html{
 }
 
 /*le da todo el margen para moverlo al centro*/
-.contacto{
+.contacto {
     margin-left: 100px;
 }
 
-.container{
+.container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ html{
 }
 
 /*abarca toda la seccion del formulario y la imagen divisora*/
-.contacto-box{
+.contacto-box {
     max-width: 850px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -46,28 +46,39 @@ html{
 }
 
 /*es la sección de la izquierda que muestra la imagen*/
-.izquierda{
+.izquierda {
     height: 100%;
     background-image: url("/assets/Imagenes/contacto.jpg");
 }
 
 /*es la sección de la derecha que muestra el formulario*/
-.derecha{
+.derecha {
     padding: 25px 40px;
 }
 
-/*el título*/
-h2{
+.contacttit{
     padding-bottom: 10px;
     margin-bottom: 10px;
     position: relative;
     color: #850E35;
+    font-family: 'Asap', sans-serif;
+    font-size: 20px;
+}
+
+/*el título*/
+h2 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    color: #850E35;
+    font-family: 'Asap', sans-serif;
+    font-size: 30px;
 }
 
 /* Formulario de Contacto */
-.formulario{
+.formulario {
     width: 100%;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 1rem;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: #FFF;
@@ -78,7 +89,7 @@ h2{
 }
 
 /* Enviar */
-.btn-producto{
+.btn-producto {
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
@@ -87,16 +98,16 @@ h2{
     padding: .7rem 2rem;
     cursor: pointer;
     font-size: 18px;
-    
+
 }
 
 /*es el boton del formulario*/
-.boton{
+.boton {
     text-align: center;
 }
 
 /*es el boton del formulario que si se toca cambia de color*/
-.btn-producto:hover{
+.btn-producto:hover {
     background-color: #EE6983;
 }
 
@@ -105,10 +116,10 @@ h2{
     position: relative;
     /* margin: 20px 0 40px;
     width: 190px; */
-  }
-  
-  /* Letras de Input */
-  .form-control input {
+}
+
+/* Letras de Input */
+.form-control input {
     background-color: transparent;
     border: 0;
     border-bottom: 2px #FFDDD2 solid;
@@ -117,36 +128,36 @@ h2{
     padding: 15px 0;
     font-size: 18px;
     color: #000;
-  }
-  
-  .form-control input:focus,
-  .form-control input:valid {
+}
+
+.form-control input:focus,
+.form-control input:valid {
     outline: 0;
     border-bottom-color: #000;
-  }
-  
-  .form-control label {
+}
+
+.form-control label {
     position: absolute;
     top: 15px;
     left: 0;
     pointer-events: none;
-  }
-  
-  /* Letras estáticas */
-  .form-control label span {
+}
+
+/* Letras estáticas */
+.form-control label span {
     display: inline-block;
     font-size: 18px;
     min-width: 5px;
     color: #850E35;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  /* Letras elevadas */
-  .form-control input:focus+label span,
-  .form-control input:valid+label span {
+}
+
+/* Letras elevadas */
+.form-control input:focus+label span,
+.form-control input:valid+label span {
     color: #850E35;
     transform: translateY(-30px);
-  }
+}
 
 /*Es el diseño del boton para el contacto*/
 .fancy {
@@ -252,4 +263,276 @@ h2{
 .fancy:hover .bottom-key-2 {
     right: 0;
     width: 0;
+}
+
+@media (max-width:768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        outline: none;
+        border: none;
+        text-decoration: none;
+    
+        transition: .2s linear;
+    }
+    
+    html {
+        font-size: 32.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    
+    }
+    
+    /*le da todo el margen para moverlo al centro*/
+    .contacto {
+        margin-left: 100px;
+    }
+    
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    /*abarca toda la seccion del formulario y la imagen divisora*/
+    .contacto-box {
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #FFF;
+        margin-right: 100px;
+        box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    }
+    
+    /*es la sección de la izquierda que muestra la imagen*/
+    .izquierda {
+        height: 100%;
+        background-image: url("/assets/Imagenes/contacto.jpg");
+    }
+    
+    /*es la sección de la derecha que muestra el formulario*/
+    .derecha {
+        margin-right: 100%;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .contacttit{
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+        font-size: 20px;
+    }
+    
+    /*el título*/
+    h2 {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+        font-size: 30px;
+    }
+    
+    /* Formulario de Contacto */
+    .formulario {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: 2px solid rgba(0, 0, 0, 0);
+        background-color: #FFF;
+        border-color: #FFDDD2;
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: .3s;
+    }
+    
+    /* Enviar */
+    .btn-producto {
+        display: inline-block;
+        margin-top: 1rem;
+        border-radius: 5rem;
+        background-color: #850E35;
+        color: aliceblue;
+        padding: .7rem 2rem;
+        cursor: pointer;
+        font-size: 18px;
+    
+    }
+    
+    /*es el boton del formulario*/
+    .boton {
+        text-align: center;
+    }
+    
+    /*es el boton del formulario que si se toca cambia de color*/
+    .btn-producto:hover {
+        background-color: #EE6983;
+    }
+    
+    /* Diseño y Movimiento de Formulario */
+    .form-control {
+        position: relative;
+        /* margin: 20px 0 40px;
+        width: 190px; */
+    }
+    
+    /* Letras de Input */
+    .form-control input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px #FFDDD2 solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: #000;
+    }
+    
+    .form-control input:focus,
+    .form-control input:valid {
+        outline: 0;
+        border-bottom-color: #000;
+    }
+    
+    .form-control label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        pointer-events: none;
+    }
+    
+    /* Letras estáticas */
+    .form-control label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        color: #850E35;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    /* Letras elevadas */
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        color: #850E35;
+        transform: translateY(-30px);
+    }
+    
+    /*Es el diseño del boton para el contacto*/
+    .fancy {
+        background-color: transparent;
+        border: 2px solid #850E35;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 40px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 1.25em 2em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        font-size: 13px;
+    }
+    
+    .fancy::before {
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: #850E35;
+        top: 50%;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: #850E35 0.3s linear, width 0.3s linear;
+    }
+    
+    .fancy .text {
+        font-size: 1.125em;
+        line-height: 1.33333em;
+        padding-left: 2em;
+        display: block;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #850E35;
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-2 {
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy:hover {
+        color: white;
+        background: #850E35;
+    }
+    
+    .fancy:hover::before {
+        width: 0.9375rem;
+        background: white;
+    }
+    
+    .fancy:hover .text {
+        color: white;
+        padding-left: 1.5em;
+    }
+    
+    .fancy:hover .top-key {
+        left: -2px;
+        width: 0px;
+    }
+    
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+        right: 0;
+        width: 0;
+    }
 }
