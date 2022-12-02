@@ -97,3 +97,105 @@ footer ul li a{
     margin-bottom: 10px;
     
 }
+
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        font-weight: 400;
+        background-color: #FFDDD2;
+    }
+    
+    .footer .imagen img{
+        height: 140px;
+        width: 100px;
+    }
+    
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .footer h2{
+        padding-bottom: 10px;
+        color: #850E35;
+        font-size: 18px;
+    }
+    
+    .footer .social{
+        text-align: center;
+    }
+    
+    .derechos .copyright{
+        text-align: center;
+        padding-bottom: 20px;
+        margin-right: 50px;
+    }
+    
+    
+    .footer .social a{
+        color: inherit;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+    }
+    
+    .footer ul{
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 19x;
+        line-height: 1.6;
+        margin-bottom: 0;   
+    }
+    
+    footer ul li a{
+        color: #000;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    
+    #link { color: #cc5b5b; }
+    
+    #link:hover{ 
+        opacity: 2;
+        color: #850E35;
+    }
+    
+    .tarjetas{
+        text-align: center;
+    
+    }
+    .tarjetas img{
+        width: 10%;
+        height: 50%;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+    
+    .footer .copyright{
+        text-align: center;
+        margin-top: 5px;
+        font-size: 15px;
+        color: rgb(95, 95, 95);
+    }
+    
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 100%px;
+        margin-bottom: 10px;
+        
+    }
+}

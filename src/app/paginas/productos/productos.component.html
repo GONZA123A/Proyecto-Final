@@ -9,7 +9,7 @@
   <div class="row productos">
     <div class="col-3 tarjetas" *ngFor="let col of coleccionProductos" style="margin-left: 50px;">
       <!--Se llama a la coleccion de productos para que se repita las veces en las que se agrega un dato-->
-      <p-card [style]="{width: '300px'}">
+      <p-card [style]="{width: '100%'}">
 
         <ng-template class="template" pTemplate="header">
           <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">

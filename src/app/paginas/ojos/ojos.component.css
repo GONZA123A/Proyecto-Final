@@ -456,6 +456,8 @@ input:checked+label .action span.option-2 {
     background: none;
 }
 
+
+
 .botoncoleccion {
     --primary-color: #aa0047;
     --hovered-color: #aa0047;
@@ -518,56 +520,1575 @@ input:checked+label .action span.option-2 {
 }
 
 
-@media (max-width:901px){
-    .top-productos .productos .tarjetas{
-        margin-right: 80px;
+
+@media (max-width:375px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+    
+    html {
+        font-size: 32.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
+    .top-productos .texto .subtitulo {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        margin-left: 12px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+    }
+
+    .top-productos .texto .titulo {
+        text-align: center;
+        margin-right: 60px;
+    }
+
+
+    .top-productos .productos .tarjetas img{
+        width: 100%;
+        height: 10%;
+    }
+
+    .top-productos .productos .tarjetas {
+        width: 100%;
+        height: 50%;
+        padding-right: 80px;
+        padding-left: 0%;
+        margin-right: 0%;
+        margin-left: 0%;
+
+    }
+    
+    .top-productos {
+    
+        padding-left: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    .top-productos .productos .tarjetas {
+        margin: 10px;
+        width: 260px;
+    }
+    
+    .iconos {
+        padding-bottom: 20px;
+    }
+    
+    
+    .top-productos .productos .tarjetas .descripcion .tit {
+        display: none;
+    }
+    
+    .top-productos .productos .tarjetas .descripcion .price {
+        text-align: left;
+        font-size: 16px;
+        margin-left: 10px;
+        font-family: 'Asap', sans-serif;
+    }
+    
+    .top-productos .productos .tarjetas .pi {
+    
+        font-size: 12px;
+        color: #e84393;
+    
+    }
+    
+    .top-productos .productos .tarjetas .pi:hover {
+        font-size: 14px;
+    }
+    
+    .top-productos .productos .carrito {
+        margin: 5px;
+    }
+    
+    .top-productos .productos .favorito {
+        margin: 5px;
         margin-left: 20px;
-
+        /* margin-right: 120px; */
+    
     }
-}
-
-@media (max-width:840px){
-    .top-productos .productos .tarjetas{
-        margin-left: 40px;
-
+    
+    .top-productos .productos .tarjetas .descripcion span {
+        text-align: left;
+        font-size: 16px;
+        text-decoration: line-through;
+        color: #999;
     }
-}
-
-@media (max-width:1056px){
-    .top-productos .productos .tarjetas{
-        margin-right: 130px;
-
+    
+    
+    .top-productos .texto .titulo{
+        text-align: left;
+        font-family: 'Asap', sans-serif;
+        font-size: 60px;
+        font-weight: 300px;
     }
-}
-
-@media (max-width:811px){
-    .top-productos .productos .tarjetas{
-        margin-right: 80px;
-        margin-left: 20px;
-
+    
+    .top-productos .texto .subtitulo{
+        text-align: left;
+        font-size: 30px;
+        letter-spacing: 10px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
     }
-}
-
-@media (max-width:795px){
-    .top-productos .productos .tarjetas{
-        margin-right: 100px;
-
+    
+    .top-productos .texto h1 {
+        text-align: left;
+        font-size: 22px;
+        font-weight: 700;
     }
-}
-
-
-@media (max-width:770px){
-    .top-productos .container .texto{
-        padding-left: 190px;
+    
+    .top-productos .texto p {
+        text-align: left;
+        font-size: 16px;
+        color: #999;
     }
-}
+    
 
-@media (max-width:400px){
-
-    .top-productos .productos .tarjetas{
-        padding-left: 290px;
+    
+    
+    /*Es el diseño del boton para mostrar los detalles de cada producto*/
+    .fancy {
+        background-color: transparent;
+        border: 2px solid #e84393;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding-top:10px;
+        padding-left: 20px;
+        padding-right: 50px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        font-size: 13px;
+    }
+    
+    .fancy::before {
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: #e84393;
+        top: 50%;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: #e84393 0.3s linear, width 0.3s linear;
+    }
+    
+    .fancy .text {
+        display: none;
+        
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-2 {
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy:hover {
+        color: white;
+        background: #e84393;
+    }
+    
+    .fancy:hover::before {
+        width: 0.9375rem;
+        background: white;
+    }
+    
+    .fancy:hover .text {
+        color: white;
+        padding-left: 1.5em;
+    }
+    
+    .fancy:hover .top-key {
+        left: -2px;
+        width: 0px;
+    }
+    
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+        right: 0;
+        width: 0;
+    }
+    
+    .card {
+        width: 50px;
+        height: 54px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    .card-img {
+        background-color: #ffcaa6;
+        height: 40%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+    }
+    
+    .card-info {
+        padding-top: 10%;
+    }
+    
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .card-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+    
+    /*Text*/
+    .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    
+    .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+    }
+    
+    /*Button*/
+    .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+    
+    }
+    
+    /*Hover*/
+    .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    }
+    
+    .card-button:hover {
+        border: 1px solid #ffcaa6;
+        background-color: #ffcaa6;
+    }
+    
+    
+    
+    /*diseño de la tarjeta que se usa para la descripcion de los productos*/
+    .Caracteristicas {
+        font-size: 15px;
+        color: #aa0047;
+    
+        display: flex;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #cccccc;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .Titulo {
+        font-size: 30px;
+        margin-right: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: #52061f;
+        font-family: 'Asap', sans-serif;
+    
+    }
+    
+    .contenido .marca {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    .contenido .precio {
+        text-align: center;
+        font-size: 25px;
+        margin: 0 0 5px;
+    }
+    
+    .contenido .descripcion{
+        font-size: 18px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    /*Todo esto es del boton de favoritos*/
+    label {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 15px 10px 10px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        color: black;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    input:checked+label svg {
+        fill: hsl(0deg 100% 50%);
+        stroke: hsl(0deg 100% 50%);
+        animation: heartButton 1s;
+    }
+    
+    @keyframes heartButton {
+        0% {
+            transform: scale(1);
+        }
+    
+        25% {
+            transform: scale(1.3);
+        }
+    
+        50% {
+            transform: scale(1);
+        }
+    
+        75% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    input+label .action {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+    }
+    
+    input+label .action span {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        transition: all .5s;
+    }
+    
+    input+label .action span.option-1 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    input:checked+label .action span.option-1 {
+        transform: translate(0px, -100%);
+        opacity: 0;
+    }
+    
+    input+label .action span.option-2 {
+        transform: translate(0px, 100%);
+        opacity: 0;
+    }
+    
+    input:checked+label .action span.option-2 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    /*es de la descripcion*/
+    
+    .contenido .descripcion{
+        text-align: center;
+        padding-top: 20px;
     }
 
     
+    .tit {
+        width: 230px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    /*diseño boton de la card descripcion para salir*/
+    .botoncoleccion {
+        left: 480px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+    
+    .botoncoleccion {
+        --primary-color: #aa0047;
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color)
+    }
+    
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 2px;
+        transition: 0.3s ease-out;
+    }
+    
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Salir";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+    
+    }
+    
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+    
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+    
 }
+
+@media (max-width:425px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+    
+    html {
+        font-size: 32.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
+    .top-productos .productos {
+        margin: 20px;
+    }
+    
+    
+    .iconos {
+        padding-bottom: 20px;
+    }
+    
+
+    .top-productos .texto .subtitulo {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        margin-left: 12px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+    }
+
+    .top-productos .texto .titulo {
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    .top-productos {
+    
+        padding-left: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    .top-productos .productos .tarjetas {
+        margin: 10px;
+        width: 260px;
+    }
+    
+    .top-productos .productos .tarjetas .descripcion .tit {
+        font-size: 25px;
+        font-weight: 600;
+        color: #3a0517;
+        font-family: 'Asap', sans-serif;
+        margin-left: 10px;
+    }
+    
+    .top-productos .productos .tarjetas .descripcion .price {
+        text-align: left;
+        font-size: 20px;
+        margin-left: 10px;
+        font-family: 'Asap', sans-serif;
+    }
+    
+    .top-productos .productos .tarjetas .pi {
+    
+        font-size: 23px;
+        color: #e84393;
+    
+    }
+    
+    .top-productos .productos .tarjetas .pi:hover {
+        font-size: 25px;
+    }
+    
+    .top-productos .productos .carrito {
+        margin: 10px;
+    }
+    
+    .top-productos .productos .favorito {
+        margin: 10px;
+        /* margin-right: 120px; */
+    
+    }
+    
+    .top-productos .productos .tarjetas .descripcion span {
+        text-align: left;
+        font-size: 16px;
+        text-decoration: line-through;
+        color: #999;
+    }
+    
+    .top-productos .texto{
+        margin-top: 30px;
+    }
+    
+    .top-productos .texto .titulo{
+        padding-left: 48px;
+        font-family: 'Asap', sans-serif;
+        font-size: 60px;
+        font-weight: 300px;
+    }
+    
+    .top-productos .texto .subtitulo{
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        margin-left: 60px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+    }
+    
+    .top-productos .texto h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+    
+    .top-productos .texto p {
+        text-align: left;
+        font-size: 19px;
+        color: #999;
+    }
+    
+    
+    /*Es el diseño del boton para mostrar los detalles de cada producto*/
+    .fancy {
+        background-color: transparent;
+        border: 2px solid #e84393;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 40px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 1.25em 2em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        font-size: 13px;
+    }
+    
+    .fancy::before {
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: #e84393;
+        top: 50%;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: #e84393 0.3s linear, width 0.3s linear;
+    }
+    
+    .fancy .text {
+        font-size: 1.125em;
+        line-height: 1.33333em;
+        padding-left: 2em;
+        display: block;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #e84393;
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-2 {
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy:hover {
+        color: white;
+        background: #e84393;
+    }
+    
+    .fancy:hover::before {
+        width: 0.9375rem;
+        background: white;
+    }
+    
+    .fancy:hover .text {
+        color: white;
+        padding-left: 1.5em;
+    }
+    
+    .fancy:hover .top-key {
+        left: -2px;
+        width: 0px;
+    }
+    
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+        right: 0;
+        width: 0;
+    }
+    
+    .card {
+        width: 190px;
+        height: 254px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    .card-img {
+        background-color: #ffcaa6;
+        height: 40%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+    }
+    
+    .card-info {
+        padding-top: 10%;
+    }
+    
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+    
+    /*Text*/
+    .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    
+    .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+    }
+    
+    /*Button*/
+    .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+    
+    }
+    
+    /*Hover*/
+    .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    }
+    
+    .card-button:hover {
+        border: 1px solid #ffcaa6;
+        background-color: #ffcaa6;
+    }
+    
+    
+    
+    /*diseño de la tarjeta que se usa para la descripcion de los productos*/
+    .Caracteristicas {
+        font-size: 15px;
+        color: #aa0047;
+    
+        display: flex;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #cccccc;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .Titulo {
+        font-size: 30px;
+        margin-right: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: #52061f;
+        font-family: 'Asap', sans-serif;
+    
+    }
+    
+    .contenido .marca {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    .contenido .precio {
+        text-align: center;
+        font-size: 25px;
+        margin: 0 0 5px;
+    }
+    
+    .contenido .descripcion{
+        font-size: 18px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    /*Todo esto es del boton de favoritos*/
+    label {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 15px 10px 10px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        color: black;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    input:checked+label svg {
+        fill: hsl(0deg 100% 50%);
+        stroke: hsl(0deg 100% 50%);
+        animation: heartButton 1s;
+    }
+    
+    @keyframes heartButton {
+        0% {
+            transform: scale(1);
+        }
+    
+        25% {
+            transform: scale(1.3);
+        }
+    
+        50% {
+            transform: scale(1);
+        }
+    
+        75% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    input+label .action {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+    }
+    
+    input+label .action span {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        transition: all .5s;
+    }
+    
+    input+label .action span.option-1 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    input:checked+label .action span.option-1 {
+        transform: translate(0px, -100%);
+        opacity: 0;
+    }
+    
+    input+label .action span.option-2 {
+        transform: translate(0px, 100%);
+        opacity: 0;
+    }
+    
+    input:checked+label .action span.option-2 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    /*es de la descripcion*/
+    
+    .contenido .descripcion{
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .row .productos .tarjetas {
+        margin-left: 30px;
+    }
+    
+    .tit {
+        width: 230px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    /*diseño boton de la card descripcion para salir*/
+    .botoncoleccion {
+        left: 480px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+    
+    
+    
+    .botoncoleccion {
+        --primary-color: #aa0047;
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color)
+    }
+    
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 2px;
+        transition: 0.3s ease-out;
+    }
+    
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Salir";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+    
+    }
+    
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+    
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+        
+}
+
+
+@media (max-width:768px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+    
+    html {
+        font-size: 32.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
+    .top-productos .productos {
+        margin: 20px;
+    }
+    
+    
+    .iconos {
+        padding-bottom: 20px;
+    }
+    
+
+    .top-productos .texto .subtitulo {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        margin-left: 12px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+    }
+
+    .top-productos .texto .titulo {
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    .top-productos {
+    
+        padding-left: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    .top-productos .productos .tarjetas {
+        margin: 10px;
+        width: 260px;
+    }
+    
+    .top-productos .productos .tarjetas .descripcion .tit {
+        font-size: 25px;
+        font-weight: 600;
+        color: #3a0517;
+        font-family: 'Asap', sans-serif;
+        margin-left: 10px;
+    }
+    
+    .top-productos .productos .tarjetas .descripcion .price {
+        text-align: left;
+        font-size: 20px;
+        margin-left: 10px;
+        font-family: 'Asap', sans-serif;
+    }
+    
+    .top-productos .productos .tarjetas .pi {
+    
+        font-size: 23px;
+        color: #e84393;
+    
+    }
+    
+    .top-productos .productos .tarjetas .pi:hover {
+        font-size: 25px;
+    }
+    
+    .top-productos .productos .carrito {
+        margin: 10px;
+    }
+    
+    .top-productos .productos .favorito {
+        margin: 10px;
+        /* margin-right: 120px; */
+    
+    }
+    
+    .top-productos .productos .tarjetas .descripcion span {
+        text-align: left;
+        font-size: 16px;
+        text-decoration: line-through;
+        color: #999;
+    }
+    
+    .top-productos .texto{
+        margin-top: 30px;
+    }
+    
+    .top-productos .texto .titulo{
+        padding-left: 48px;
+        font-family: 'Asap', sans-serif;
+        font-size: 60px;
+        font-weight: 300px;
+    }
+    
+    .top-productos .texto .subtitulo{
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        margin-left: 60px;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+    }
+    
+    .top-productos .texto h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+    
+    .top-productos .texto p {
+        text-align: left;
+        font-size: 19px;
+        color: #999;
+    }
+    
+    
+    /*Es el diseño del boton para mostrar los detalles de cada producto*/
+    .fancy {
+        background-color: transparent;
+        border: 2px solid #e84393;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 40px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 1.25em 2em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        font-size: 13px;
+    }
+    
+    .fancy::before {
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: #e84393;
+        top: 50%;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: #e84393 0.3s linear, width 0.3s linear;
+    }
+    
+    .fancy .text {
+        font-size: 1.125em;
+        line-height: 1.33333em;
+        padding-left: 2em;
+        display: block;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #e84393;
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-2 {
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy:hover {
+        color: white;
+        background: #e84393;
+    }
+    
+    .fancy:hover::before {
+        width: 0.9375rem;
+        background: white;
+    }
+    
+    .fancy:hover .text {
+        color: white;
+        padding-left: 1.5em;
+    }
+    
+    .fancy:hover .top-key {
+        left: -2px;
+        width: 0px;
+    }
+    
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+        right: 0;
+        width: 0;
+    }
+    
+    .card {
+        width: 190px;
+        height: 254px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    .card-img {
+        background-color: #ffcaa6;
+        height: 40%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+    }
+    
+    .card-info {
+        padding-top: 10%;
+    }
+    
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+    
+    /*Text*/
+    .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    
+    .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+    }
+    
+    /*Button*/
+    .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+    
+    }
+    
+    /*Hover*/
+    .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    }
+    
+    .card-button:hover {
+        border: 1px solid #ffcaa6;
+        background-color: #ffcaa6;
+    }
+    
+    
+    
+    /*diseño de la tarjeta que se usa para la descripcion de los productos*/
+    .Caracteristicas {
+        font-size: 15px;
+        color: #aa0047;
+    
+        display: flex;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #cccccc;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .Titulo {
+        font-size: 30px;
+        margin-right: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: #52061f;
+        font-family: 'Asap', sans-serif;
+    
+    }
+    
+    .contenido .marca {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    .contenido .precio {
+        text-align: center;
+        font-size: 25px;
+        margin: 0 0 5px;
+    }
+    
+    .contenido .descripcion{
+        font-size: 18px;
+        font-family: 'Karla', sans-serif;
+    }
+    
+    /*Todo esto es del boton de favoritos*/
+    label {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 15px 10px 10px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        color: black;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    input:checked+label svg {
+        fill: hsl(0deg 100% 50%);
+        stroke: hsl(0deg 100% 50%);
+        animation: heartButton 1s;
+    }
+    
+    @keyframes heartButton {
+        0% {
+            transform: scale(1);
+        }
+    
+        25% {
+            transform: scale(1.3);
+        }
+    
+        50% {
+            transform: scale(1);
+        }
+    
+        75% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    input+label .action {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+    }
+    
+    input+label .action span {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        transition: all .5s;
+    }
+    
+    input+label .action span.option-1 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    input:checked+label .action span.option-1 {
+        transform: translate(0px, -100%);
+        opacity: 0;
+    }
+    
+    input+label .action span.option-2 {
+        transform: translate(0px, 100%);
+        opacity: 0;
+    }
+    
+    input:checked+label .action span.option-2 {
+        transform: translate(0px, 0%);
+        opacity: 1;
+    }
+    
+    /*es de la descripcion*/
+    
+    .contenido .descripcion{
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .row .productos .tarjetas {
+        margin-left: 30px;
+    }
+    
+    .tit {
+        width: 230px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    /*diseño boton de la card descripcion para salir*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+    
+    
+    
+    .botoncoleccion {
+        --primary-color: #aa0047;
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color)
+    }
+    
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 2px;
+        transition: 0.3s ease-out;
+    }
+    
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Salir";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+    
+    }
+    
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+    
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+    
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
