@@ -187,7 +187,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1346px;
+    width: 100%;
 }
 
 /*se encuentra el margin del parallax*/
@@ -352,4 +352,2501 @@ html {
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+/*responsive medida 1440*/
+@media (min-width:1440px) {
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 60vh;
+        max-width: 89.9rem;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 60rem;
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 6.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 4.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 2.0rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 12px;
+        letter-spacing: 2px;
+        font-size: 52px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 60px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 25px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 34px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 30px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 22px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 16px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 230px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 59px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 27px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 25x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+/*responsive medida 1024*/
+@media (max-width:1024px) {
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 60vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 6.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 4.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 2.0rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 12px;
+        letter-spacing: 2px;
+        font-size: 52px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 60px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 25px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 34px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 30px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 22px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 16px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 120px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 48px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 27px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 25x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+}
+/*responsive medida 768*/
+@media (max-width:768px) {
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 3.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 2.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 0.9rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 3px;
+        letter-spacing: 2px;
+        font-size: 32px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 40px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 15px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 24px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 20px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 12px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 12px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 120px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 48px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 27px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 25x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 30px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+}
+
+/*responsive medida 425*/
+@media (max-width:425px) {
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 3.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 2.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 0.9rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 3px;
+        letter-spacing: 2px;
+        font-size: 32px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 40px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 15px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 24px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 20px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 12px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 12px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 40px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 23px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 15x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 20px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+}
+/*responsive medida 375*/
+@media (max-width:375px) {
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 3.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 2.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 0.9rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 3px;
+        letter-spacing: 2px;
+        font-size: 32px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 40px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 15px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 24px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 20px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 12px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 12px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 40px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 23px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 15x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 20px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+}
+
+@media (max-width:320px){
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 3.5rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 2.5rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 0.9rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 3px;
+        letter-spacing: 2px;
+        font-size: 32px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 40px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 15px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 24px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 20px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 12px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 12px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 30px;
+        padding-right: 40px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 23px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 15x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 20px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 45px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:210px){
+    html {
+        font-size: 5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
+
+    /*es la parte inicial que contiene la imagen de fondo*/
+    .home {
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background-image: url(../../../assets/Imagenes/fonditooooo.png);
+        background-size: cover;
+        background-position: center;
+        padding-left: 20px;
+    }
+
+    /*dicta el tamaño del home*/
+    .home .content {
+        max-width: 50rem;
+
+    }
+
+    /*dicta el diseño del titulo*/
+    .home .content h3 {
+        font-size: 2.4rem;
+        color: #850E35;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-right: 30px;
+    }
+
+    /*dicta el diseño del subtitulo*/
+    .home .content h1 {
+        font-family: 'Asap', sans-serif;
+        font-size: 2rem;
+        margin-top: 2px;
+        line-height: 1.5;
+    }
+
+    /*dicta el diseño del texto de parrafo*/
+    .home .content p {
+        font-size: 0.6rem;
+        color: #850E35;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        text-align: left;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*dicta el diseño del boton de home*/
+    .cta {
+        border: none;
+        background: none;
+    }
+
+    .cta span {
+        padding-bottom: 3px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+
+    .cta span:hover {
+        color: #850E35;
+    }
+
+    .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+
+    .cta:active svg {
+        transform: scale(0.9);
+    }
+
+    .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /*es el separador que da la bienvenida*/
+    .separadortexto {
+        background-color: #ffffff;
+        position: static;
+        padding: 30px;
+    }
+
+    /*es el titulo de ese separador*/
+    .separadortexto h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 30px;
+        color: #850E35;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*es el parrafo descriptivo de ese separador*/
+    .separadortexto .textoblanco p {
+        text-align: center;
+        color: #850E35;
+        font-size: 15px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*es el diseño total de los iconos descriptivos*/
+    .iconos {
+        text-align: center;
+        background-color: #FFDDD2;
+        padding: 30px;
+    }
+
+    /*son los iconos y su diseño*/
+    .iconos .icon {
+        font-size: 24px;
+        color: #850E35;
+        margin-bottom: 10px;
+    }
+
+    /*son los iconos cuando se interacciona con ellos*/
+    .iconos .icon:hover {
+        font-size: 20px;
+        color: #e8439394;
+    }
+
+    /*es el subtitulo de esos iconos*/
+    .iconos .info h2 {
+        font-size: 12px;
+        font-family: 'Asap', sans-serif;
+        margin-bottom: 2px;
+        font-weight: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*es la descripcion de esos iconos*/
+    .iconos .info p {
+        font-size: 12px;
+        margin-top: 2px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: #850E35;
+        font-family: 'Karla', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /*es el separador que contiene el background y efecto parralax*/
+    .parallax {
+        display: flex;
+        align-items: center;
+        height: 350px;
+        background: url(../../../assets/Imagenes/parallax.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    /*se encuentra el margin del parallax*/
+    .parallax {
+        margin-bottom: 20px;
+    }
+
+    /*diseño de la columna*/
+    .parallax .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #e8439367;
+        padding: 10px;
+        padding-right: 12px;
+        border-radius: 2rem;
+    }
+
+    /*diseño del titulo*/
+    .parallax h1 {
+        font-size: 16px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 10px;
+        letter-spacing: 8px;
+    }
+
+    /*diseño subtitulo*/
+    .parallax h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*diseño descripcion*/
+    .parallax h4 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*diseño boton*/
+    .botoncoleccion {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+    }
+
+    .botoncoleccion {
+        --primary-color: rgb(255, 255, 255);
+        --hovered-color: #aa0047;
+        position: relative;
+        display: flex;
+        font-weight: 600;
+        font-size: 15x;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .botoncoleccion p {
+        margin: 0;
+        position: relative;
+        font-size: 20px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 50px;
+    }
+
+    .botoncoleccion::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -1px;
+        background: var(--hovered-color);
+        height: 1px;
+        transition: 0.3s ease-out;
+    }
+
+    .botoncoleccion p::before {
+        position: absolute;
+        /*   box-sizing: border-box; */
+        content: "Ver más";
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+
+    }
+
+    .botoncoleccion:hover::after {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover p::before {
+        width: 100%;
+    }
+
+    .botoncoleccion:hover svg {
+        transform: translateX(4px);
+        color: var(--hovered-color)
+    }
+
+    .botoncoleccion svg {
+        color: var(--primary-color);
+        transition: 0.2s;
+        position: relative;
+        width: 30px;
+        transition-delay: 0.2s;
+    }
+
+    /*diseño del separador rosa de descuento*/
+    .separadorrosa {
+        background-color: #e84393;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    /*descripcion de ese separador*/
+    .separadorrosa .textorosa p {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        font-family: 'Karla', sans-serif;
+    }
+
+    /*titulo de los descuentos y su carrousel*/
+    .ofertas .textoofertas h3 {
+        text-align: center;
+        color: #850E35;
+        font-size: 35px;
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*linea decorativa izquierda*/
+    .linea {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+
+    }
+
+    /*linea decorativa derecha*/
+    .linea2 {
+        border-top: 1.20px solid rgb(155, 155, 155);
+        height: 2px;
+        max-width: 78px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    /*calesita y sus espacios*/
+    .ofertas .descuentos {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }

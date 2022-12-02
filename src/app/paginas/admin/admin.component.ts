@@ -250,6 +250,8 @@ export class AdminComponent implements OnInit {
 
 
   //ESTO ES DE CALESITA-----------------------------------------------------------------------------------------------------------------------
+
+  //ESTO ES DE CALESITA-----------------------------------------------------------------------------------------------------------------------
   agregarCalesita() {
     if (this.calesita.valid) {
       let nuevoCalesita: Calesita = {
@@ -298,21 +300,30 @@ export class AdminComponent implements OnInit {
 
   //permite editar los datos o el formulario
   editarCalesita() {
-    let datos: Calesita = {
-      imagen: this.calesitaSeleccionado.imagen,
-      idcalesita: this.calesitaSeleccionado.idcalesita,
-    };
-    this.servicioCalesita
-      .modificarCalesita(this.calesitaSeleccionado.idcalesita, datos)
-      .then((calesita) => {
-        Swal.fire({ //es una alerta de sweetalert2
-          position: 'top-end',
-          icon: 'success',
-          title: 'El producto se ha subido correctamente',
-          showConfirmButton: false,
-          timer: 1500
-        })
-      });
+    this.storage.subirImagen(this.nombre,this.imagen,'calesita').then(
+      resultado=>{
+        this.storage.obtenerUrlImage(resultado).then(
+          url=>{
+            let datos: Calesita = {
+              imagen: url,
+              idcalesita: this.calesitaSeleccionado.idcalesita,
+            };
+            this.servicioCalesita
+              .modificarCalesita(this.calesitaSeleccionado.idcalesita, datos)
+              .then((calesita) => {
+                Swal.fire({ //es una alerta de sweetalert2
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'El producto se ha subido correctamente',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              });
+          }
+        )
+      }
+    )
+    
   }
   
   //muestra lo que se puede editar

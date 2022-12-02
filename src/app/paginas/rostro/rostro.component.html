@@ -5,7 +5,7 @@
   </div>
   <div class="row productos">
     <div class="col-3 tarjetas" *ngFor="let col of rostro" style="margin-left: 60px;">
-      <p-card [style]="{width: '300px'}">
+      <p-card [style]="{width: '100%'}">
 
         <ng-template class="template" pTemplate="header">
           <img [src]="col.imagen" routerLink="/productos" alt="" width="400px" height="250px">

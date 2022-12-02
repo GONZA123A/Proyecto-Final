@@ -3,6 +3,8 @@ import { MenuItem } from 'primeng/api';
 import { Usuarios } from 'src/app/models/usuario';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
+import { Router } from '@angular/router';
+import { LoginWithGoogleService } from 'src/app/login-with-google.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +12,9 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+
+  logueado = false
 
   //declaraciones
   items: MenuItem[] = [];
@@ -19,9 +24,11 @@ export class NavbarComponent implements OnInit {
    modalVisible : boolean = false;
 
 
-  constructor() { }
+  constructor(private router:Router, private login:UsuariosService,private google:LoginWithGoogleService) { }
 
   ngOnInit():void{
+    this.logueado = this.login.estaLogueado()
+    this.google.getUser()
     this.items = [
       {
         label: "Inicio",
@@ -65,10 +72,29 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        label: "Admin",
+        label: "Administrador",
         icon: "pi pi-user",
         routerLink: "/admin",
+        
       }
     ];
   }
-}
+  goToLogin(){
+    this.router.navigateByUrl("Login")
+  }
+
+  iniciarSesionConGoogle(){
+    this.google.loginWithGoogle()
+    this.ngOnInit()
+  }
+
+  cerrarSesionConGoogle(){
+    this.google.logOut()
+  }
+
+
+  CerrarSesion(){
+    this.login.logOut()
+    this.router.navigateByUrl("/")
+    this.ngOnInit()
+  }}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Usuarios } from 'src/app/models/usuario';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   colUsuario:Usuarios[]=[]
 
 
-  constructor(private serviciosUsuarios: UsuariosService  ) { }
+  constructor(private serviciosUsuarios: UsuariosService,private router: Router  ) { }
   
   ngOnInit(): void {
     this.serviciosUsuarios.obtenerUsuarios().subscribe(
@@ -27,6 +28,9 @@ export class LoginComponent implements OnInit {
   }
   iniciaSesion(){
     this.serviciosUsuarios.login(this.Usuarios,this.colUsuario)
+    this.router.navigateByUrl("/").then(
+      reDirectTo=>window.location.reload()
+    )
+    
   }
- 
 }

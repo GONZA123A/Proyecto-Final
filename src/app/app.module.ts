@@ -65,8 +65,9 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PanelModule} from 'primeng/panel';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-
-
+import { CookieService } from 'ngx-cookie-service';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { LoginWithGoogleService } from './login-with-google.service';
 
 
 
@@ -131,9 +132,10 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
     PanelModule,
     DynamicDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
 
   ],
-  providers: [UsuariosService, StorageService, ProductosService, CalesitaService],
+  providers: [UsuariosService, StorageService, ProductosService, CalesitaService, CookieService, LoginWithGoogleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

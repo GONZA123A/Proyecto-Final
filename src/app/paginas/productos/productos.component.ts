@@ -12,6 +12,8 @@ export class ProductosComponent implements OnInit {
   productoSeleccionado:Producto
   modalVisible:boolean=false;
 
+  productoFavorito: string[]=[]
+
   constructor(private servicioProductos: ProductosService) { //creamos una propiedad que contenga el valor del servicio de productos
   }
 
@@ -30,6 +32,6 @@ export class ProductosComponent implements OnInit {
     this.productoSeleccionado=info;
 
     }
-
+   
   }
 

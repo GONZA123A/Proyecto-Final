@@ -6,9 +6,9 @@
         </h2>
     </ng-template>
     <ng-template pTemplate="end">
-        <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-heart"></button>
-        <button type="button" pButton pRipple class="p-button-text" id="boton" icon="pi pi-shopping-cart"></button>
         <button type="button" pButton pRipple class="p-button-text" id="boton" routerLink="/login" icon="pi pi-user"></button>
+        <button type="button" pButton pRipple class="p-button-text" id="boton" routerLink="/login" icon="pi pi-user-minus" (click)="CerrarSesion()" *ngIf="logueado"></button>
+        
     </ng-template>
 </p-menubar>
 
