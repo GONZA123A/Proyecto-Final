@@ -2,7 +2,7 @@
 background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
     <div class="container">
         <div class="row">
-            <div class="col-8 cont" style="background-color: pink">
+            <div class="col-8 cont">
                 <div class="categoria">
                     <h1 class="titulo">Productos</h1>
                 </div>
@@ -102,7 +102,7 @@ background-repeat: no-repeat;background-size: cover;background-attachment: fixed
     </div>
 </div>
 <!-- Formulario para AGREGAR Producto -->
-<p-dialog header="Agregar Producto" [(visible)]="modalVisible">
+<p-dialog  header="Agregar Producto" [(visible)]="modalVisible">
     <form [formGroup]="producto" class="fomularioproducto">
         <span class="p-float-label">
             <input class="float-input" id="float-input" type="text" pInputText formControlName="nombre">
@@ -137,19 +137,6 @@ background-repeat: no-repeat;background-size: cover;background-attachment: fixed
     </form>
 </p-dialog>
 
-<!-- Cartel de Advertencia antes de ELIMINAR -->
-<!-- <p-dialog header="¡¡ADVERTENCIA!!" [(visible)]="eliminarVisible">
-    <p class="advertencia">
-        ¿Deseas eliminar este producto?
-    </p>
-    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success" (click)="borrarProducto()"></button>
-    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"
-        (click)="eliminarVisible=false">
-    </button>
-</p-dialog> -->
-<!-- Card para MOSTRAR Productos -->
-
-<!--este es el boton que agrega la informacion a los productos-->
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -171,20 +158,3 @@ background-repeat: no-repeat;background-size: cover;background-attachment: fixed
     </form>
 </p-dialog>
 
-
-<!-- Cartel de Advertencia antes de ELIMINAR Calesita -->
-<!-- <p-dialog header="¡¡ADVERTENCIA!!" [(visible)]="eliminarVisibleCalesita">
-    <p class="advertencia">
-        ¿Deseas eliminar esta imagen?
-    </p>
-    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success" (click)="borrarCalesita()"></button>
-    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"
-        (click)="eliminarVisibleCalesita=false">
-    </button>
-</p-dialog> -->
-
-
-<!-- Card para MOSTRAR Calesita -->
-
-
-<!--este es el boton que agrega la informacion a Calesita-->
