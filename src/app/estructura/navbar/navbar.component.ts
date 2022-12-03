@@ -20,13 +20,13 @@ export class NavbarComponent implements OnInit {
   items: MenuItem[] = [];
   adminVisible = false;
 
-   //modalvisible es para mostrar el form
-   modalVisible : boolean = false;
+  //modalvisible es para mostrar el form
+  modalVisible: boolean = false;
 
 
-  constructor(private router:Router, private login:UsuariosService,private google:LoginWithGoogleService) { }
+  constructor(private router: Router, private login: UsuariosService, private google: LoginWithGoogleService) { }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.logueado = this.login.estaLogueado()
     this.google.getUser()
     this.items = [
@@ -75,26 +75,30 @@ export class NavbarComponent implements OnInit {
         label: "Administrador",
         icon: "pi pi-user",
         routerLink: "/admin",
-        
+
+
       }
     ];
   }
-  goToLogin(){
+  /* La función goToLogin() navega a la página de inicio de sesión  */
+  goToLogin() {
     this.router.navigateByUrl("Login")
+    
   }
 
-  iniciarSesionConGoogle(){
+  iniciarSesionConGoogle() {
     this.google.loginWithGoogle()
     this.ngOnInit()
   }
 
-  cerrarSesionConGoogle(){
+  cerrarSesionConGoogle() {
     this.google.logOut()
   }
 
 
-  CerrarSesion(){
+  CerrarSesion() {
     this.login.logOut()
     this.router.navigateByUrl("/")
     this.ngOnInit()
-  }}
+  }
+}

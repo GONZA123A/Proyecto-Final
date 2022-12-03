@@ -42,7 +42,7 @@ export class AdminComponent implements OnInit {
   //se declara y se declaran sus tipos o valores
   imagen: string;
   imagen1: string;
-  imagen2: string; 
+  imagen2: string;
   textBoton: string;
   //esto es de producto
   productoSeleccionado: Producto;
@@ -118,7 +118,7 @@ export class AdminComponent implements OnInit {
         imagen2: "",
         idproductos: '',
       };
-      this.storage.subirImagen(this.nombre, this.imagen,"productos").then(
+      this.storage.subirImagen(this.nombre, this.imagen, "productos").then(
         resp => {
           this.storage.obtenerUrlImage(resp)
             .then(
@@ -202,7 +202,7 @@ export class AdminComponent implements OnInit {
       precio: productoSeleccionado.precio,
       categoria: productoSeleccionado.categoria,
       descripcion: productoSeleccionado.descripcion,
-      
+
     });
   }
 
@@ -300,10 +300,10 @@ export class AdminComponent implements OnInit {
 
   //permite editar los datos o el formulario
   editarCalesita() {
-    this.storage.subirImagen(this.nombre,this.imagen,'calesita').then(
-      resultado=>{
+    this.storage.subirImagen(this.nombre, this.imagen, 'calesita').then(
+      resultado => {
         this.storage.obtenerUrlImage(resultado).then(
-          url=>{
+          url => {
             let datos: Calesita = {
               imagen: url,
               idcalesita: this.calesitaSeleccionado.idcalesita,
@@ -323,9 +323,9 @@ export class AdminComponent implements OnInit {
         )
       }
     )
-    
+
   }
-  
+
   //muestra lo que se puede editar
   mostrarEditarCalesita(calesitaSeleccionado: Calesita) {
     this.calesitaSeleccionado = calesitaSeleccionado;
@@ -353,7 +353,7 @@ export class AdminComponent implements OnInit {
   borrarCalesita() {
     this.servicioCalesita
       .eliminarCalesita(this.calesitaSeleccionado.idcalesita)
-      
+
 
   }
 

@@ -8,43 +8,48 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LoginWithGoogleService {
 
-  constructor(private auth:AngularFireAuth, private cookie: CookieService) { }
+  constructor(private auth: AngularFireAuth, private cookie: CookieService) { }
 
-  async loginWithGoogle(){
+  /* Crea un nuevo objeto GoogleAuthProvider, luego inicia sesión con una ventana emergente y luego se suscribe a 
+   el authState, luego obtiene el idToken, luego establece el idToken en la cookie
+   */
+  async loginWithGoogle() {
     let referenceProvider = new firebase.auth.GoogleAuthProvider();
     await this.auth.signInWithPopup(referenceProvider);
     this.auth.authState.subscribe(
-      async user=>{
+      async user => {
         await user?.getIdToken()
-        .then(
-          token=>{
-            this.cookie.set("idToken",token)
-          }
-        )
-        .catch(
-          error=>{
-            console.error("Ocurrió un error: ",error)
-          }
-        )
+          .then(
+            token => {
+              this.cookie.set("idToken", token)
+            }
+          )
+          .catch(
+            error => {
+              console.error("Ocurrió un error: ", error)
+            }
+          )
       }
     )
   }
 
-  getUser(){
+  /* La función obtiene el token del usuario del servicio de autenticación de Firebase  */
+  getUser() {
     this.auth.authState.subscribe(
-      async user=>{
+      async user => {
         let token = await user?.getIdToken()
         console.log(token)
       }
     )
   }
 
-  logOut(){
+  /* Llama a la función signOut() del servicio de autenticación y luego elimina la cookie idToken */
+  logOut() {
     this.auth.signOut().then(
-      ()=>{
+      () => {
         this.cookie.delete("idToken");
       }
     )
   }
-  
+
 }

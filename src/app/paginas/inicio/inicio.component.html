@@ -1,5 +1,5 @@
-
-<section class="home" id="home"><!-- es la parte inicial, acá tenes la imagen grande y textos-->
+<section class="home" id="home">
+    <!-- es la parte inicial, acá tenes la imagen grande y textos-->
     <div class="content">
         <h3>Maquillaje</h3>
         <h1>de calidad</h1>
@@ -10,13 +10,15 @@
         <button class="cta" routerLink="/productos">
             <span class="hover-underline-animation"> Shop now </span>
             <svg viewBox="0 0 46 16" height="30" width="50" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
-                <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    data-name="Path 10" id="Path_10"></path>
             </svg>
         </button>
     </div>
 </section>
 
-<section class="separadortexto"> <!--es el separador que da la bienvenida-->
+<section class="separadortexto">
+    <!--es el separador que da la bienvenida-->
     <div class="textoblanco">
         <h1>¡Bienvenido!</h1>
         <p>Te encuentras en la página oficial de "Paris", el emprendimiento que ofrece maquillaje<br>
@@ -26,7 +28,8 @@
     </div>
 </section>
 
-<section class="iconos" id="iconos"> <!-- es el apartado de los 3 iconos-->
+<section class="iconos" id="iconos">
+    <!-- es el apartado de los 3 iconos-->
     <div class="row separador">
         <div class="col-4 box1">
             <i class="pi pi-box icon"></i>
@@ -52,42 +55,46 @@
     </div>
 </section>
 
-<section class="parallax"> <!--el separador tiene un efecto parallax y habla de la coleccion de verano-->
+<section class="parallax">
+    <!--el separador tiene un efecto parallax y habla de la coleccion de verano-->
     <div class="row">
         <h1>¡COLECCIÓN <br> V E R A N O!</h1>
         <h3>¡Mira los nuevos productos!</h3>
         <h4>Maquillaje para esta estación.</h4>
         <button class="botoncoleccion">
             <p routerLink="/productos">Ver más</p>
-            <svg class="svgcoleccion" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svgcoleccion" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
             </svg>
         </button>
-       
+
     </div>
 
-   
+
 
 </section>
 
-<section class="separadorrosa"> <!--es el separador rosa de descuentos-->
+<section class="separadorrosa">
+    <!--es el separador rosa de descuentos-->
     <div class="textorosa">
         <p>30% de descuento en el black friday - 10% de descuento con transferencia bancaria.</p>
     </div>
 </section>
 
-<section class="ofertas"> <!--contiene el area de descuentos con el calesita-->
+<section class="ofertas">
+    <!--contiene el area de descuentos con el calesita-->
     <div class="textoofertas">
         <div class="linea"></div>
         <h3>Descuentos</h3>
         <div class="linea2"></div>
     </div>
     <div class="descuentos">
-        <p-carousel [value]="coleccionCalesita" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+        <p-carousel [value]="coleccionCalesita" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [autoplayInterval]="3000">
             <ng-template let-calesita pTemplate="item">
                 <img [src]="calesita.imagen" style="margin-left:60px;" width="300px" height="300px" alt="">
             </ng-template>
         </p-carousel>
     </div>
 </section>
-

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 //Firebase
 import { AngularFireModule } from "@angular/fire/compat";
 import { initializeApp } from 'firebase/app';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { LoginWithGoogleService } from './login-with-google.service';
 
 //componentes del Proyecto
 
@@ -26,6 +28,7 @@ import { CalesitaService } from './servicios/calesita.service';
 import { UsuariosService } from './servicios/usuarios.service';
 import { StorageService } from './servicios/storage.service';
 import { ProductosService } from './servicios/productos.service';
+import { CookieService } from 'ngx-cookie-service';
 
 //Componentes de PrimeNG
 import {MenubarModule} from 'primeng/menubar';
@@ -65,9 +68,6 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PanelModule} from 'primeng/panel';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { CookieService } from 'ngx-cookie-service';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { LoginWithGoogleService } from './login-with-google.service';
 
 
 

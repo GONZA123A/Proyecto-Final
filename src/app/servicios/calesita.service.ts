@@ -7,18 +7,27 @@ import { Calesita } from '../models/calesita';
   providedIn: 'root'
 })
 export class CalesitaService {
-  private calesitaCollection: AngularFirestoreCollection <Calesita>;
-  
-  constructor(private db: AngularFirestore) { 
+  private calesitaCollection: AngularFirestoreCollection<Calesita>;
+
+
+  constructor(private db: AngularFirestore) {
     this.calesitaCollection = db.collection('calesita');
   }
 
-  obtenerCalesita(){
+  /**
+   Devuelve un observable de la colección calesita, que es una lista de documentos, cada uno de los cuales es una calesita
+   */
+  obtenerCalesita() {
+    // El método devuelve un observable de la colección de documentos en la colección calesita.
     return this.calesitaCollection.snapshotChanges().pipe(map((action) => action.map((a) => a.payload.doc.data())));
   }
 
-  creatCalesita(nuevaCalesita: Calesita, url: string){
-    return new Promise (async (resolve, reject) =>{
+  /**
+   * Crea un nuevo documento en la colección de calesitas, con los datos de la nueva calesita y la url de la imagen
+   * @returns Una promesa que resolverá o rechazará según el resultado de la operación.
+   */
+  creatCalesita(nuevaCalesita: Calesita, url: string) {
+    return new Promise(async (resolve, reject) => {
       try {
         const id = this.db.createId();
         nuevaCalesita.idcalesita = id;
@@ -26,23 +35,29 @@ export class CalesitaService {
 
         const resultado = await this.calesitaCollection.doc(id).set(nuevaCalesita);
         resolve(resultado);
-      }catch(error){
+      } catch (error) {
         reject(error);
       }
     });
   }
 
-  modificarCalesita(idcalesita:string, nuevaData: Calesita){
+  /**
+   *  Toma una identificación y un nuevo objeto, y actualiza el documento con esa identificación con el nuevo objeto
+   */
+  modificarCalesita(idcalesita: string, nuevaData: Calesita) {
     return this.db.collection('calesita').doc(idcalesita).update(nuevaData);
   }
 
-  
-  eliminarCalesita(idcalesita: string){
-    return new Promise((resolve, reject) =>{
-      try{
+
+  /**
+  Elimina un documento de la colección
+   */
+  eliminarCalesita(idcalesita: string) {
+    return new Promise((resolve, reject) => {
+      try {
         const resp = this.calesitaCollection.doc(idcalesita).delete();
         resolve(resp);
-      }catch(error){
+      } catch (error) {
         reject(error);
       }
     });

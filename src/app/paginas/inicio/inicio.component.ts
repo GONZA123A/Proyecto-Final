@@ -9,9 +9,9 @@ import { CalesitaService } from 'src/app/servicios/calesita.service';
 })
 export class InicioComponent implements OnInit {
 
-  calesita: string[]=[];
-  coleccionCalesita: Calesita []=[];
-  
+  calesita: string[] = [];
+  coleccionCalesita: Calesita[] = [];
+
   constructor(private servicioCalesita: CalesitaService) { }
 
   ngOnInit(): void {

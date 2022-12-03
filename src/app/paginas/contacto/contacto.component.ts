@@ -17,13 +17,17 @@ export class ContactoComponent implements OnInit {
     mensaje: new FormControl('', Validators.required),
 
   })
-  
-  textBoton:string;
+
+  textBoton: string;
   constructor(private servicioMensaje: MensajesService) { }
 
   ngOnInit(): void {
   }
-  
+
+  /* La función agregaMensaje() se llama cuando el usuario hace clic en el botón "Enviar" en el formulario. los
+   función comprueba si el formulario es válido, si lo es, crea un nuevo objeto de tipo Mensaje y envía
+   a la base de datos de Firebase. Si el formulario no es válido, muestra un mensaje de error
+    */
   agregaMensaje() {
     if (this.mensaje.valid) {
       let nuevoMensaje: Mensaje = {
@@ -43,14 +47,14 @@ export class ContactoComponent implements OnInit {
           timer: 1500
         })
       })
-      .catch((error) => {
-        Swal.fire({ //es una alerta de sweetalert2
-          icon: 'error',
-          title: 'Oops...',
-          text: 'No se pudo enviar el mesanje correctamente',
-        })
-      }
-     )
+        .catch((error) => {
+          Swal.fire({ //es una alerta de sweetalert2
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pudo enviar el mesanje correctamente',
+          })
+        }
+        )
     }
     else {
       Swal.fire({ //es una alerta de sweetalert2
@@ -61,12 +65,14 @@ export class ContactoComponent implements OnInit {
     }
 
   }
+  /* La función cargarDatos() se llama cuando el usuario hace clic en el botón. Se cambia el texto del botón.
+     "Agregar Mensaje" y se llama a la función agregaMensaje(). Luego se restablece el formulario.
+    */
   cargarDatos() {
     this.textBoton == "Agregar Mensaje";
-      this.agregaMensaje();
+    this.agregaMensaje();
     //se resentean los datos
     this.mensaje.reset();
-
   }
 
 

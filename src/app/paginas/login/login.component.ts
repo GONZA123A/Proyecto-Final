@@ -11,6 +11,7 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
 })
 export class LoginComponent implements OnInit {
 
+/* Crear un grupo de formularios con dos controles de formulario, nombre de usuario y contraseña. */
   Usuarios = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
       usuarios=>this.colUsuario = usuarios
     )
   }
+/* Una función que permite al usuario iniciar sesión en la aplicación. */
   iniciaSesion(){
     this.serviciosUsuarios.login(this.Usuarios,this.colUsuario)
     this.router.navigateByUrl("/").then(

@@ -7,19 +7,21 @@ import { UsuariosService } from './servicios/usuarios.service';
   providedIn: 'root'
 })
 export class LoginGuard implements CanActivate {
-  constructor(private servicioUsuario:UsuariosService, private router : Router){}
+  constructor(private servicioUsuario: UsuariosService, private router: Router) { }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(this.servicioUsuario.estaLogueado() ){
+    /* Comprobando si el usuario ha iniciado sesión. Si es así, devuelve verdadero, si no, redirige a la página de inicio de sesión.
+    y devuelve falso. */
+    if (this.servicioUsuario.estaLogueado()) {
 
-        return true;
+      return true;
 
-      }
-      else{
-        this.router.navigateByUrl("login")
-        return false
-      }
+    }
+    else {
+      this.router.navigateByUrl("login")
+      return false
+    }
   }
-  }
+}
