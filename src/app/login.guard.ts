@@ -15,7 +15,6 @@ export class LoginGuard implements CanActivate {
     /* Comprobando si el usuario ha iniciado sesión. Si es así, devuelve verdadero, si no, redirige a la página de inicio de sesión.
     y devuelve falso. */
     if (this.servicioUsuario.estaLogueado()) {
-
       return true;
 
     }

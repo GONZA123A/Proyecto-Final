@@ -1,4 +1,4 @@
-<!-- Es el Contacto -->
+
 <section class="contacto">
     <div class="container">
         <div class="contacto-box">
@@ -6,9 +6,10 @@
             </div>
             <div class="derecha">
                 <h2>Contáctanos</h2>
+                <form [formGroup]="mensaje">
                 <span class="p-float-label">
                     <div class="form-control">
-                        <input id="float-input" class="formulario" type="text" pInputText required="">
+                        <input id="float-input" class="formulario" type="text"  formControlName="nombre" pInputText required="">
                         <label>
                             <span style="transition-delay:0ms">N</span>
                             <span style="transition-delay:50ms">o</span>
@@ -21,7 +22,7 @@
                 </span>
                 <span class="p-float-label">
                     <div class="form-control">
-                        <input id="float-input" class="formulario" type="text" pInputText required="">
+                        <input id="float-input" class="formulario" type="text" formControlName="apellido"  pInputText required="">
                         <label>
                             <span style="transition-delay:0ms">A</span>
                             <span style="transition-delay:50ms">p</span>
@@ -36,7 +37,7 @@
                 </span>
                 <span class="p-float-label">
                     <div class="form-control">
-                        <input id="float-input" class="formulario" type="text" pInputText required="">
+                        <input id="float-input" class="formulario" type="text" formControlName="correoElectronico"  pInputText required="">
                         <label>
                             <span style="transition-delay:0ms">C</span>
                             <span style="transition-delay:50ms">o</span>
@@ -62,16 +63,16 @@
                 <span class="p-float-label">
                     <div class="form-control">
                         <h2 class="contacttit">Escriba su mensaje aquí</h2>
-                        <textarea [rows]="5" [cols]="30" class="formulario" placeholder="Mensaje"
-                            required=""></textarea>
+                        <textarea [rows]="5" [cols]="30" class="formulario" placeholder="Mensaje" required="" formControlName="mensaje" ></textarea>
                     </div>
                 </span>
-                <a class="fancy">
+                <a class="fancy" (click)="cargarDatos()">
                     <span class="top-key"></span>
                     <span class="text" label="Ver mas">Enviar</span>
                     <span class="bottom-key-1"></span>
                     <span class="bottom-key-2"></span>
                 </a>
+            </form>
             </div>
         </div>
     </div>

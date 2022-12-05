@@ -3,14 +3,17 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { map } from 'rxjs';
 import { Calesita } from '../models/calesita';
 
+/* Un decorador que le dice a Angular que este servicio debe ser creado por el inyector de la aplicación raíz. */
 @Injectable({
-  providedIn: 'root'
+/* Indicar a Angular que este servicio debe ser creado por el inyector de la aplicación raíz. */
+   providedIn: 'root'
 })
 export class CalesitaService {
-  private calesitaCollection: AngularFirestoreCollection<Calesita>;
-
-
-  constructor(private db: AngularFirestore) {
+  private calesitaCollection:AngularFirestoreCollection<Calesita>;
+ 
+  constructor(/* Creating a reference to the database. */
+  private db: AngularFirestore) {
+/* Creating a reference to the collection calesita. */
     this.calesitaCollection = db.collection('calesita');
   }
 
@@ -19,7 +22,8 @@ export class CalesitaService {
    */
   obtenerCalesita() {
     // El método devuelve un observable de la colección de documentos en la colección calesita.
-    return this.calesitaCollection.snapshotChanges().pipe(map((action) => action.map((a) => a.payload.doc.data())));
+    return this.calesitaCollection.snapshotChanges().
+    pipe(map((action) => action.map((a) => a.payload.doc.data())));
   }
 
   /**
@@ -29,10 +33,10 @@ export class CalesitaService {
   creatCalesita(nuevaCalesita: Calesita, url: string) {
     return new Promise(async (resolve, reject) => {
       try {
+/* Creando una identificación única para el documento. */
         const id = this.db.createId();
         nuevaCalesita.idcalesita = id;
         nuevaCalesita.imagen = url
-
         const resultado = await this.calesitaCollection.doc(id).set(nuevaCalesita);
         resolve(resultado);
       } catch (error) {
@@ -45,7 +49,8 @@ export class CalesitaService {
    *  Toma una identificación y un nuevo objeto, y actualiza el documento con esa identificación con el nuevo objeto
    */
   modificarCalesita(idcalesita: string, nuevaData: Calesita) {
-    return this.db.collection('calesita').doc(idcalesita).update(nuevaData);
+    return this.db.collection('calesita').doc(idcalesita)./* Updating the document with the new data. */
+    update(nuevaData);
   }
 
 

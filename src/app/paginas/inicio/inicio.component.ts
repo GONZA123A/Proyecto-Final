@@ -15,6 +15,7 @@ export class InicioComponent implements OnInit {
   constructor(private servicioCalesita: CalesitaService) { }
 
   ngOnInit(): void {
+/* Suscripción al observable que devuelve el método `obtenerCalesita`. */
     this.servicioCalesita.obtenerCalesita().subscribe(calesita => this.coleccionCalesita = calesita);
   }
 }

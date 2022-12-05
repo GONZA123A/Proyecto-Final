@@ -18,7 +18,6 @@ const routes: Routes = [
   {path:'nosotros',component:NosotrosComponent},
   {path:'productos',component:ProductosComponent},
   {path:'admin',component:AdminComponent, canActivate :[LoginGuard]},
-
   {path:'login',component:LoginComponent},
   {path:'rostro',component:RostroComponent},
   {path:'labial',component:LabialComponent},

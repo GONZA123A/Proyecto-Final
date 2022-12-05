@@ -13,6 +13,13 @@ export class StorageService {
   constructor() { }
 
   //el ref recibe la url de la imagen y la instancia
+  /**
+   * It takes a string, an image, and a route as parameters, and returns a promise
+   * @param {string} nombre - string, imagen: any, ruta: string
+   * @param {any} imagen - any: This is the image that you want to upload.
+   * @param {string} ruta - string: The path where the image will be stored in the storage.
+   * @returns The image is being returned.
+   */
   async subirImagen(nombre: string, imagen: any, ruta: string) {
     //posibilidad de error se usa try y catch
     try {

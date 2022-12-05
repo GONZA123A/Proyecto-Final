@@ -38,7 +38,7 @@ export class ContactoComponent implements OnInit {
         idMensaje: ""
       }
 
-      this.servicioMensaje.creatMensaje(nuevoMensaje).then((mesanja) => {
+      this.servicioMensaje.creatMensaje(nuevoMensaje).then((mensaje) => {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
